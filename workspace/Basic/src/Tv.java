@@ -4,6 +4,6 @@ public class Tv {
    boolean sw; // default = false
 
    void power() {
-       sw = !sw;
+      sw = !sw;
    }
 }

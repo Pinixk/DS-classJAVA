@@ -26,5 +26,4 @@ class MyFrm extends JFrame {
         setLocationRelativeTo(this);
         setVisible(true);
     }
-
 }
