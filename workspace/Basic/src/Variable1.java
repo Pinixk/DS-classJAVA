@@ -10,7 +10,6 @@ public class Variable1 {
         char c2 = '\u0000'; // 헥사코드
         char c3 = 'A'; // 아스키 코드
         // char c3 = 'hello'; // char는 무조건 1글자만 가능
-
         System.out.println(b2);
 
         // System.out.println(b1);
