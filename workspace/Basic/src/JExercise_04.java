@@ -2,6 +2,7 @@ import java.util.Date;
 
 public class JExercise04 {
   public static void main(String[] args) {
+    // 1번
     int x = 15;
     System.out.println(x > 10 && x < 20);
     char ch = 'x';
@@ -14,5 +15,7 @@ public class JExercise04 {
     System.out.println(!powerOn?"true":"false");
     String str = "yes";
     System.out.println(str.equals("yes"));
+
+    // 2번
   }
 }
