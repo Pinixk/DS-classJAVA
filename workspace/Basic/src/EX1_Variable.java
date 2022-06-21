@@ -1,4 +1,4 @@
-public class Variable1 {
+public class EX1_Variable {
     // 선언
     boolean b1; // 전역변수, heap = 동적인 데이터
     static char c1; // char에만 '' 사용 가능
@@ -15,7 +15,7 @@ public class Variable1 {
         // System.out.println(b1);
         // b1 = heap, 사용 불가, 앞에 static 붙여야 가능
 
-        Variable1 v1 = new Variable1(); // new = 생성 연산자, 초기화 시킴
+        EX1_Variable v1 = new EX1_Variable(); // new = 생성 연산자, 초기화 시킴
         System.out.println(v1.b1); // heap이 인스턴스로 올라와서 사용 가능
         System.out.println(c1);
         System.out.println(c2 + 1); // 1
@@ -36,7 +36,7 @@ public class Variable1 {
         float f1 = 0.123456789f;
         double d1 = 0.1234567890123456789;
 
-        System.out.println(bt1 + 10); // 형 변환, ring현상
+        System.out.println(bt1 + 10); // 형 변환, overflow
         System.out.println(bt2);
         System.out.println(s1);
         System.out.println(s2);

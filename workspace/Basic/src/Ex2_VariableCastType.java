@@ -1,4 +1,4 @@
-public class VariableCastType {
+public class Ex2_VariableCastType {
     public static void main(String[] args) {
         byte b1 = 100;
         byte b2 = 100;
