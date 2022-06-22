@@ -1,6 +1,6 @@
 public class JExercise_04 {
   public static void main(String[] args) {
-    // 1번
+    // // 1번
     // int x = 15;
     // System.out.println(x > 10 && x < 20);
     // char ch = 'x';
@@ -14,23 +14,23 @@ public class JExercise_04 {
     // String str = "yes";
     // System.out.println(str.equals("yes"));
 
-    // 2번
+    // // 2번
     // int num2 = 0;
     // for (int i = 0; i <= 20; i++) {
     // if(!(i%2==0 || i%3==0)) num2 += i;
     // }
     // System.out.println(num2);
 
-    // 3번
-    int sum = 0;
-    int totalSum = 0;
-    for(int i=1; i<=10; i++){
-    sum += i;
-    totalSum += sum;
-    }
-    System.out.println(totalSum);
+    // // 3번
+    // int sum = 0;
+    // int totalSum = 0;
+    // for(int i=1; i<=10; i++){
+    // sum += i;
+    // totalSum += sum;
+    // }
+    // System.out.println(totalSum);
 
-    // 4번
+    // // 4번
     // int sum = 0;
     // int num = 0;
     // int flag = 1;
@@ -44,7 +44,7 @@ public class JExercise_04 {
     // System.out.println("num="+num);
     // System.out.println("sum="+sum);
 
-    // 5번
+    // // 5번
     // int i=0;
     // while(i<=10){
     // int j=0;
@@ -56,7 +56,7 @@ public class JExercise_04 {
     // i++;
     // }
 
-    // 6번
+    // // 6번
     // for (int i = 1; i <= 6; i++) {
     // for (int j = 1; j <= 6; j++) {
     // if(i+j==6)
@@ -64,7 +64,7 @@ public class JExercise_04 {
     // }
     // }
 
-    // 7번
+    // // 7번
     // String str = "12445";
     // int sum = 0;
 
@@ -73,11 +73,11 @@ public class JExercise_04 {
     // }
     // System.out.println("sum="+sum);
 
-    // 8번
+    // // 8번
     // int value = (int) (Math.random() * 6) + 1;
     // System.out.println("value:" + value);
 
-    // 9번
+    // // 9번
     // int num = 12345;
     // int sum = 0;
 
@@ -87,9 +87,8 @@ public class JExercise_04 {
     // }
     // System.out.println("sum="+sum);
 
-    // 10번
-
-    // 1~100 answer . 사이의 임의의 값을 얻어서 에 저장한다
+    // // 10번
+    // // 1~100 answer . 사이의 임의의 값을 얻어서 에 저장한다
     // int answer = (int) (Math.random() * 100) + 1;
     // int input = 0; // 사용자입력을 저장할 공간
     // int count = 0; // 시도횟수를 세기위한 변수
