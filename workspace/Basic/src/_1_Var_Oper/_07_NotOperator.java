@@ -1,4 +1,4 @@
-public class J03_NotOperator {
+public class _07_NotOperator {
     public static void main(String[] args) {
         boolean judge = false;
 

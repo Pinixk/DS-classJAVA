@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class J02_StringEqual {
+public class _06_StringEqual {
     public static void main(String[] args) {
         String id = "admin";
         System.out.println("ID를 입력하세요");

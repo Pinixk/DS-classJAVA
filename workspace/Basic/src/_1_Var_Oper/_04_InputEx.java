@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-public class Ex4_InputEx {
+public class _04_InputEx {
     public static void main(String[] args) {
         // console 방식
         Scanner s = new Scanner(System.in);

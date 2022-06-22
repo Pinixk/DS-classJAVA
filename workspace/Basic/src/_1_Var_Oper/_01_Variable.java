@@ -1,4 +1,4 @@
-public class Ex1_Variable {
+public class _01_Variable {
     // 선언
     boolean b1; // 전역변수, heap = 동적인 데이터
     static char c1; // char에만 '' 사용 가능

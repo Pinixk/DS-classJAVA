@@ -5,7 +5,7 @@
 
 import javax.swing.JOptionPane;
 
-public class J01_Operator {
+public class _05_Operator {
     public static void main(String[] args) {
         String input = "";
         try {

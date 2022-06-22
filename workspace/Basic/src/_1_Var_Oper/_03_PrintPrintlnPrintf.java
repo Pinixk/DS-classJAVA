@@ -1,4 +1,4 @@
-public class Ex3_PrintPrintlnPrintf {
+public class _03_PrintPrintlnPrintf {
     public static void main(String[] args) {
         System.out.print("h");
         System.out.print("a");
