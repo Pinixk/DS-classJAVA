@@ -6,12 +6,18 @@ public class Exercise_05_05 {
       for (int i = 0; i < ballArr.length; i++) {
          int j = (int) (Math.random() * ballArr.length);
          int tmp = 0;
+         
+            tmp = ballArr[i];
+            ballArr[i] = ballArr[j];
+            ballArr[j] = tmp;
+      }
 
-         ball3[i] = j;
+      for (int i = 0; i < 3; i++) {
+         ball3[i] = ballArr[i];
       }
 
       for (int i = 0; i < ball3.length; i++) {
-         System.out.println(ball3[i]);
+         System.out.print(ball3[i]);
       }
    }
 }
