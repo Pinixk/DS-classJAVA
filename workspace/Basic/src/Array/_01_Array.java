@@ -24,9 +24,6 @@ public class _01_Array {
         arr5 =  new int[]{1,2,3,4,5};
         // arr5 = {1,2,3,4,5}; // 안됨
 
-        System.out.println(arr[1]);
-        System.out.println(arr2[1]);
-        System.out.println(arr3[1]);
         System.out.println(arr5[1]);
     }
 }
