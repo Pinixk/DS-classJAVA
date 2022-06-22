@@ -10,9 +10,9 @@ public class Exercise_05_04 {
         float average = 0;
 
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
+            for (int j = 0; j < arr[i].length; j++) {
                 total += arr[i][j];
-                average = 
+                average = (float)total/(arr.length*arr[i].length);
             }
         }
         

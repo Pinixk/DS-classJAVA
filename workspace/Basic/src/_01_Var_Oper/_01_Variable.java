@@ -15,7 +15,7 @@ public class _01_Variable {
         // System.out.println(b1);
         // b1 = heap, 사용 불가, 앞에 static 붙여야 가능
 
-        Ex1_Variable v1 = new Ex1_Variable(); // new = 생성 연산자, 초기화 시킴
+        _01_Variable v1 = new _01_Variable(); // new = 생성 연산자, 초기화 시킴
         System.out.println(v1.b1); // heap이 인스턴스로 올라와서 사용 가능
         System.out.println(c1);
         System.out.println(c2 + 1); // 1
