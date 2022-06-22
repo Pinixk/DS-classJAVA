@@ -1,21 +1,25 @@
 public class Main {
    public static void main(String[] args) {
-      int x = 2;
-      int y = 5;
-      char c = 'A';
+     
+      int answer = (int)(Math.random()*100)+1;
+      int input = 0;
+      int count = 0;
 
-      System.out.println(y>=5 || x <0 && x>2);
-      System.out.println(y += 10 - x++);
-      System.out.println(x+= 2);
-      System.out.println(!('A' <= c && c <= 'Z'));
-      System.out.println('C'-c);
-      System.out.println('5'-'0');
-      System.out.println(c+1);
-      System.out.println(++c);
-      System.out.println(c++);
-      System.out.println(c);
-      
-      int num = 456;
-      System.out.println(Math.round(num%100)*100);
+      java.util.Scanner s = new java.util.Scanner(System.in);
+
+      do {
+         count++;
+         System.out.println("1과 100사이 값을 입력하세요 :");
+         input = s.nextInt();
+
+         if(input>answer) System.out.println("값이 큽니다");
+         else if(input<answer) System.out.println("값이 작습니다");
+         else if(input==answer) {
+            System.out.println("맞았습니다"); 
+            System.out.println("시도 횟수는"+count+"번 입니다");
+            break;
+         }
+
+      } while (true);
    }
 }
