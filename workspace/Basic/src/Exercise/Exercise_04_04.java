@@ -1,4 +1,4 @@
-public class JExercise_04_04 {
+public class Exercise_04_04 {
     public static void main(String[] args) {
 
         // int sum = 0;

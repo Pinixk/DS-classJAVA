@@ -1,4 +1,4 @@
-public class JExercise_04_06 {
+public class Exercise_04_06 {
     public static void main(String[] args) {
 
         // for (int i = 1; i <= 6; i++) {

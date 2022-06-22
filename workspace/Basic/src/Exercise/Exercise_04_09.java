@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class JExercise_04_09 {
+public class Exercise_04_09 {
     public static void main(String[] args) {
 
         // int num = 12345;

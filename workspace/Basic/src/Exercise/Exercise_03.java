@@ -1,4 +1,4 @@
-public class JExercise_03 {
+public class Exercise_03 {
     public static void main(String[] args) {
         // 2번
         int x = 2;

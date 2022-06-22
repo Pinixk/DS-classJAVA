@@ -1,4 +1,4 @@
-public class JExercise_04_10 {
+public class Exercise_04_10 {
     public static void main(String[] args) {
 
         // 1~100 answer . 사이의 임의의 값을 얻어서 에 저장한다

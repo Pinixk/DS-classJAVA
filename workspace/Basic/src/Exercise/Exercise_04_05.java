@@ -1,4 +1,4 @@
-public class JExercise_04_05 {
+public class Exercise_04_05 {
     public static void main(String[] args) {
 
         int i = 0;
