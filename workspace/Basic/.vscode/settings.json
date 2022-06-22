@@ -8,4 +8,5 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
     ],
+    "java.debug.settings.forceBuildBeforeLaunch": false,
 }
