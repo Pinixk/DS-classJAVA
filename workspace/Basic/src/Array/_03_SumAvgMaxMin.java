@@ -23,5 +23,9 @@ public class _03_SumAvgMaxMin {
         System.out.printf("arr 합 : %d, 평균 : %4.2f", total, (float) total / arr.length);
         System.out.println();
         System.out.printf("arr 최대값 : %d, 최소값 : %d", max, min);
+
+        // Arrays를 이용한 방법
+        // int min = Arrays.stream(arr).min().getAsInt();
+        // int max = Arrays.stream(arr).max().getAsInt();
     }
 }
