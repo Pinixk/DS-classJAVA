@@ -1,3 +1,5 @@
+package Exercise;
+
 public class Exercise_04_10 {
     public static void main(String[] args) {
 

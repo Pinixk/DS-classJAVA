@@ -1,3 +1,5 @@
+package Exercise;
+
 public class Exercise_05_03 {
     public static void main(String[] args) {
         int[] arr = {10,20,30,40,50};
