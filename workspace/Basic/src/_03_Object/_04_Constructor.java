@@ -26,5 +26,5 @@ class Foo {
     public Foo(String name, String like) {
         this.name = name;
         this.like = like;
-    }
+    }   // 매개변수가 있는 생성자
 }
