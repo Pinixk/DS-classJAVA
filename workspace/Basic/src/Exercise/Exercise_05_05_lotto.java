@@ -11,7 +11,8 @@ public class Exercise_05_05_lotto {
         for (int i = 0; i < lotto.length; i++) {
             lotto[i] = i+1;
         }
-        // _04_ShuffleSort.shuffle(lotto);
+        _04_ShuffleSort.shuffle(lotto);
+        
         shuffle(lotto);
         System.out.println();
         pick6Balls(lotto);

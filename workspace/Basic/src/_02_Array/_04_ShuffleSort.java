@@ -21,7 +21,7 @@ public class _04_ShuffleSort {
     }
 
     // shuffle
-    static void shuffle(int[] arr) { // 메인에 static이 붙어있기 때문에 같이 붙여준다.
+    public static void shuffle(int[] arr) { // 메인에 static이 붙어있기 때문에 같이 붙여준다.
         for (int i = 0; i < arr.length; i++) {
             int rand = (int) (Math.random() * 10);
             int tmp = arr[i];
