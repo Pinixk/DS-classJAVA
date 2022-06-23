@@ -2,8 +2,8 @@ package _03_Object;
 
 public class _04_Constructor {
     public static void main(String[] args) {
-        Foo foo2 = new Foo(); // 기본 생성자, JVM이 생성함
-        Foo foo = new Foo("곰돌이", "꿀");
+        Foo foo = new Foo(); // 기본 생성자, JVM이 생성함
+        Foo foo2 = new Foo("곰돌이", "꿀");
         // class에서 생성자를 만들면 기본 생성자 못 만듬
         // 생성자 overloading으로 해결 가능
     }
