@@ -10,14 +10,14 @@ public class Exercise_06_03 {
         s.eng = 60;
         s.math = 76;
 
-        System.out.println("이름 : " + s.getName());
+        System.out.println("이름 : " + s.name);
         System.out.println("총점 : " + s.getTotal());
         System.out.println("평균 : " + s.getAverage());
     }
 }
 
 class Student1{
-    String name;
+   String name;
 	int ban;
 	int no;
 	int kor;
