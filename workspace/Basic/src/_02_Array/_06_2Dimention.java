@@ -6,12 +6,12 @@ public class _06_2Dimention {
 
         int[][] sum = new int[arr.length+1][arr[0].length+1];
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                sum[i][j] = arr[i][j];
-                sum[i][arr[i].length] += arr[i][j];
-                sum[arr.length][j] += arr[i][j];
-                sum[arr.length][arr[i].length] += arr[i][j];
+        for (int i = 0; i < arr.length; i++) {                  // arr의 행 길이
+            for (int j = 0; j < arr[i].length; j++) {           // arr의 열 길이
+                sum[i][j] = arr[i][j];                          // arr을 sum에 복사
+                sum[i][arr[i].length] += arr[i][j];             // 행의 합을 끝에 출력
+                sum[arr.length][j] += arr[i][j];                // 열의 합을 끝에 출력
+                sum[arr.length][arr[i].length] += arr[i][j];    // 모든 원소의 합을 출력
             }
         }
         _05_2Dimension.printArr(sum);
