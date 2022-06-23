@@ -1,7 +1,7 @@
 {
     "java.project.sourcePaths": [
         "src",
-        "workspace/Basic/src/Array",
+        "workspace/Basic/src/_02_Array",
         "workspace/Basic/src/Exercise"
     ],
     "java.project.outputPath": "bin",
@@ -10,3 +10,4 @@
     ],
     "java.debug.settings.forceBuildBeforeLaunch": false,
 }
+
