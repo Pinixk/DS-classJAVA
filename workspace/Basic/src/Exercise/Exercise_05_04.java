@@ -18,7 +18,6 @@ public class Exercise_05_04 {
             }
         }
         
-
         System.out.println("total = "+total);
         System.out.println("average = "+average);
     }

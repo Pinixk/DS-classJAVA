@@ -1,9 +1,6 @@
 {
     "java.project.sourcePaths": [
         "src",
-        "../src/_01_Var_Oper",
-        "../src/_02_Array",
-        "../src/Exercise"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
