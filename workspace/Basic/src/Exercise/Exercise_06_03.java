@@ -24,11 +24,22 @@ class Student1{
 	int eng;
 	int math;
 
-    public Student1(String name, int ban, int no, int kor, int eng, int math) {
-        this.name = name; this.ban = ban;this.no=no;this.kor=kor;this.eng=eng;
-        this.math = math;
-      }
-      
-    public String getAverage() {return (int)(getTotal()/3.0f*10.0f+0.5f)/10.0f;}
-    public String getTotal() {return kor+eng+math;}
+    Student1(){}
+
+	public Student1(String name,
+			int ban,
+			int no,
+			int kor,
+			int eng,
+			int math) {
+		this.name = name;
+		this.ban = ban;
+		this.no = no;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+	}
+    
+    public int getTotal() {return kor+eng+math;}
+    public float getAverage() {return (int)(getTotal()/3.0f*10.0f+0.5f)/10.0f;}
 }
