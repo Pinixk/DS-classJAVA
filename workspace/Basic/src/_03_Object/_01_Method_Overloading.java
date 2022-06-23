@@ -1,6 +1,6 @@
 package _03_Object;
 
-public class _01_Method {
+public class _01_Method_Overloading {
     public static void main(String[] args) {
         Mymath mm = new Mymath();
 

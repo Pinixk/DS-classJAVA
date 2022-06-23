@@ -1,6 +1,6 @@
 package _03_Object;
 
-public class _02_Method {
+public class _02_Method_Arguement {
     public static void main(String[] args) {
         Data d = new Data();
         System.out.println(d);    // 인스턴스의 주소값 7d6f77cc
