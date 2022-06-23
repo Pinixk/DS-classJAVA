@@ -14,21 +14,21 @@ class Person {
     // 멤버 변수를 초기화
     // class의 개념을 온전하게 가져가려할 때
     // 값을 뒤에서 초기화
-
+    
     private String name;
     private String mobile;
     private String gender;
     private int age;
     // private, 객체 개념을 보호하기 위함
 
-    public String getName() return this.name;
-    public void setName(String name) this.name = name;
+    public String getName() {return this.name;}
+    public void setName(String name) {this.name = name;}
 
-    public String getMobile() return this.mobile;
-    public void setMobile(String mobile) this.mobile = mobile;
+    public String getMobile() {return this.mobile;}
+    public void setMobile(String mobile) {this.mobile = mobile;}
 
-    public String getGender() return this.gender;
-    public void setGender(String gender) this.gender = gender;
+    public String getGender() {return this.gender;}
+    public void setGender(String gender) {this.gender = gender;}
 
     public void setAge(int age) {
         if (age > 0)
