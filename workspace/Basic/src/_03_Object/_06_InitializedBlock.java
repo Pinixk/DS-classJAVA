@@ -8,10 +8,17 @@ public class _06_InitializedBlock {
         System.out.println("static{}");
     }   
 
-    // instance initialized block
+    // 초기화 블럭, instance initialized block
     {
         System.out.println("{ }");
     }
+
+    // 생성자
+    public _06_InitializedBlock(){
+        System.out.println("생성자");
+    }
+
+    // 기본값 -> 명시적 블럭 -> 초기화 블럭 -> 생성자
 
     public static void main(String[] args) {
         System.out.println("_06_InitializedBlock i1 생성");
