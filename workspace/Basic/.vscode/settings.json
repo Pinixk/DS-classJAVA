@@ -1,9 +1,9 @@
 {
     "java.project.sourcePaths": [
         "src",
-        "workspace/Basic/src/_01_Var_Oper",
-        "workspace/Basic/src/_02_Array",
-        "workspace/Basic/src/Exercise"
+        "../src/_01_Var_Oper",
+        "../src/_02_Array",
+        "../src/Exercise"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
