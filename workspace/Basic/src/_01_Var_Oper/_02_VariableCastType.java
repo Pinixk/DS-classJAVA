@@ -1,3 +1,5 @@
+package _01_Var_Oper;
+
 public class _02_VariableCastType {
     public static void main(String[] args) {
         byte b1 = 100;

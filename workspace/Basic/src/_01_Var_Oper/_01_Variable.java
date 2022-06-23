@@ -1,3 +1,5 @@
+package _01_Var_Oper;
+
 public class _01_Variable {
     // 선언
     boolean b1; // 전역변수, heap = 동적인 데이터

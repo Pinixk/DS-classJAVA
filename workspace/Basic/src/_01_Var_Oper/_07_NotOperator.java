@@ -1,3 +1,5 @@
+package _01_Var_Oper;
+
 public class _07_NotOperator {
     public static void main(String[] args) {
         boolean judge = false;

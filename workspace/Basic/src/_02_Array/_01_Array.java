@@ -1,3 +1,5 @@
+package _02_Array;
+
 public class _01_Array {
     public static void main(String[] args) {
         // 배열 선언 양식

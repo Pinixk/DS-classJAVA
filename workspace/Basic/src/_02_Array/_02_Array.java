@@ -1,3 +1,5 @@
+package _02_Array;
+
 import java.util.Arrays;
 
 public class _02_Array {

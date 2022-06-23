@@ -1,3 +1,5 @@
+package _02_Array;
+
 public class _05_2Dimension {
     public static void main(String[] args) {
         int[] arr[] = new int[3][3];

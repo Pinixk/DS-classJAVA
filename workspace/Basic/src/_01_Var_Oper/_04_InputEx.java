@@ -1,3 +1,5 @@
+package _01_Var_Oper;
+
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
