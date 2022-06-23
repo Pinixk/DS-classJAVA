@@ -10,12 +10,12 @@ public class Exercise_06_02 {
 }
 
 class Student {
-	String name;
-	int ban;
-	int no;
-	int kor;
-	int eng;
-	int math;
+	private String name;
+	private int ban;
+	private int no;
+	private int kor;
+	private int eng;
+	private int math;
 
 	public Student(String name,
 			int ban,
@@ -32,15 +32,17 @@ class Student {
 	}
 
 	public String info() {
+		int total = kor+eng+math;
+		float avg = (int)(total/3.0f*10.0f+0.5f)/10.0f;
+
 		return name + ","
 				+ ban + ","
 				+ no + ","
 				+ kor + ","
 				+ eng + ","
 				+ math + ","
-				+ (kor+eng+math)+","
-				+ (float)((kor+eng+math)/3);
-				
+				+ total+","
+				+ avg; // 형 변환
 	}
 
 }
