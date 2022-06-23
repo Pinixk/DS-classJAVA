@@ -13,12 +13,15 @@ class Foo {
     private String name;
     private String like;
 
-    public Foo() {
-    }
     // 생성자(Counstructor), 초기화를 목적으로 함
     // method의 일종
     // return type이 없음
     // 객체의 개념을 온전하게 가져오기 위함
+
+    public Foo() {
+        this("곰돌이 푸", "꿀"); 
+        // class안에서 생성자를 만들때 default 값 지정
+    }
 
     public Foo(String name, String like) {
         this.name = name;
