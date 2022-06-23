@@ -13,8 +13,8 @@ public class _02_Method {
         // block scope, 값이 일시적으로 변한다
 
         // 1) Data 
-        // change(d);               // 10000, 
-        // System.out.println(d);   // 인스턴스 d와 주소값이 같다.
+        change(d);               // 10000, 
+        System.out.println(d);   // 인스턴스 d와 주소값이 같다.
         // 인스턴스 d의 x값이 참조형 change의 매개변수로
         // 매개변수의 타입이 같아야 한다
         // call by reference
