@@ -1,4 +1,4 @@
-package _03_Object;
+package _03_Object.extention;
 
 public class _08_Inheritance_PaCh {
     public static void main(String[] args) {
