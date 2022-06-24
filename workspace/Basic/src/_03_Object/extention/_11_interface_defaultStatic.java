@@ -1,6 +1,6 @@
 package _03_Object.extention;
 
-public class _11_interface_defaultStatic {
+public class _11_Interface_DefaultStatic {
     public static void main(String[] args) {
         MyInterface.staticMethod();
         // .으로 바로 접근이 가능함
@@ -19,7 +19,7 @@ class Child3 implements MyInterface, MyInterface2{
 
     @Override
     public void method1() {
-        MyInterface.super.method1();
+        System.out.println("method1()이 충돌나서 재정의 함");
     }
 }
 

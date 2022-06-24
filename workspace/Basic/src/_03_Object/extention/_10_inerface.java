@@ -1,6 +1,6 @@
 package _03_Object.extention;
 
-public class _10_inerface {
+public class _10_Inerface {
     public static void main(String[] args) {
         Mammals mammals[] = new Mammals[]{new Lion(),new Rabbit(),new Bat()};
         Birds birds[] = new Birds[]{new Eagle(),new Penguin(),new Crow()};
@@ -15,7 +15,7 @@ public class _10_inerface {
         flyable[1] = bat;
         // 관련 있다면 형변환을 통해 값을 담을 수 있다.
 
-        // Flyable flyable2 = new Flyable(); // interface 자체를 초기화, 불가능
+        // Flyable flyable2 = new Flyable(); // interface 스스로 instance 생성 불가능
         Flyable flyable2 = new Flyable(){ // 익명객체, class가 interface로 형변환
             @Override
             public void fly() {}
