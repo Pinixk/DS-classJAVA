@@ -1,4 +1,4 @@
-package Exercise;
+package Exercise.Exercise_06;
 
 public class Exercise_06_21 {
     static int abs(int value){

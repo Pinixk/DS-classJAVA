@@ -1,4 +1,4 @@
-package Exercise;
+package Exercise.Exercise_06;
 class MyPoint{
     int x;
     int y;

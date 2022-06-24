@@ -1,4 +1,4 @@
-package Exercise;
+package Exercise.Exercise_06;
 
 public class Exercise_06_05 {
     static double getDistance(int x, int y, int x1, int y1){

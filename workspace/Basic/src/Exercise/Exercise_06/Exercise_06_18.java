@@ -1,4 +1,4 @@
-package Exercise;
+package Exercise.Exercise_06;
 
 public class Exercise_06_18 {
     static boolean isNumber(String str){

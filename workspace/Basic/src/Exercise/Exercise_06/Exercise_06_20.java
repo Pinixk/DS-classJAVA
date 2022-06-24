@@ -1,4 +1,4 @@
-package Exercise;
+package Exercise.Exercise_06;
 
 public class Exercise_06_20 {
     static int max(int[] arr){
