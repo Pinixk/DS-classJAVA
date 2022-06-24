@@ -1,4 +1,4 @@
-package _03_Object;
+package _03_Object.composition;
 
 public class _06_InitializedBlock {
     // static initialized block

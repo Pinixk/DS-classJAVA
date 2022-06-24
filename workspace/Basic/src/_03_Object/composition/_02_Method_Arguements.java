@@ -1,4 +1,4 @@
-package _03_Object;
+package _03_Object.composition;
 
 public class _02_Method_Arguements {
     public static void main(String[] args) {

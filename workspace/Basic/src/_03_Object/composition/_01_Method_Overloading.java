@@ -1,4 +1,4 @@
-package _03_Object;
+package _03_Object.composition;
 
 public class _01_Method_Overloading {
     public static void main(String[] args) {

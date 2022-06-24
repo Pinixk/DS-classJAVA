@@ -1,4 +1,4 @@
-package _03_Object;
+package _03_Object.composition;
 
 public class _03_Getter_Setter {
     public static void main(String[] args) {

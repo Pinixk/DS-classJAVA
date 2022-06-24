@@ -1,6 +1,6 @@
 package _03_Object;
 
-public class _08_Inheritance {
+public class _08_Inheritance_PaCh {
     public static void main(String[] args) {
         Parent parent = new Parent();
         Child child = new Child();
