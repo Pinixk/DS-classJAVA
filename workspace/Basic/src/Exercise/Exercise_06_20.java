@@ -2,7 +2,15 @@ package Exercise;
 
 public class Exercise_06_20 {
     static int max(int[] arr){
-        if(arr == null || arr[i] == '0') return -9999999;
+        if(arr == null || arr.length == 0) return -9999999;
+
+        int max = arr[0];
+
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i]>max)
+                max = arr[i];
+        }
+        return max;
     }
     public static void main(String[] args) {
         int[] data = {3,2,9,4,7};
