@@ -14,6 +14,8 @@ public class _09_inheritance_Applicate {
         buyer.buy(tv);
         buyer.buy(audio);
         buyer.buy(computer);
+        // overridng 발생
+        // 묵시적으로 가능
 
         System.out.println(buyer.money);
     }
