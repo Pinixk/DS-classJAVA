@@ -17,7 +17,9 @@ abstract class Terran implements Flyable{
     public abstract void steamPack();
 
     @Override
-    public void fly() {}
+    public void fly(){
+        System.out.println("날아올라");
+    }
 }
 
 class Medic extends Terran{
