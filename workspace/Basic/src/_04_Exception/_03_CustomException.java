@@ -5,7 +5,7 @@ public class _03_CustomException {
         try {
             throw new MyException();
         } catch (Exception e1) {
-            e.printStackTrace();
+            e1.printStackTrace();
             try {
                 throw new Exception();
             } catch (Exception e2) {
