@@ -20,7 +20,8 @@ public class _06_InitializedBlock {
         System.out.println("생성자");
     }
 
-    // 기본값 -> 명시적 블럭 -> 초기화 블럭 -> 생성자
+    // 초기화 순서
+    // 기본값 -> 명시적 초기화 -> static 블럭 -> instacne 블럭 -> 생성자
 
     public static void main(String[] args) {
         System.out.println("_06_InitializedBlock i1 생성");
