@@ -5,7 +5,10 @@ class SutdaDeck {
     SutdaCard[] cards = new SutdaCard[CARD_NUM];
 
     SutdaDeck() {
-        int
+        for (int i = 0; i < cards.length; i++) {
+            int num = i%10+1;
+            
+        }
     }
 }
 
