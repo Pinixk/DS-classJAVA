@@ -1,7 +1,5 @@
 package _03_Object.extention;
 
-import org.w3c.dom.NameList;
-
 public class _09_inheritance_Applicate {
     public static void main(String[] args) {
         Buyer buyer = new Buyer();
