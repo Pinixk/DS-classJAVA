@@ -24,7 +24,9 @@ public class _10_inerface {
         for (int i = 0; i < flyable.length; i++) {
             flyable[i].fly();
             // System.out.println(flyable[i].name);
-            // 건네 준 fly()만 찍을 수 있다
+            // impliment한 class의 멤버변수와 Method를 직접 사용 할 수 없다.
+            // impliment한 fly()만 찍을 수 있다
+            // 그러나 fly()에 class의 다른 멤버변수나 method를 담아 올 수가 있다
         }
         for (int i = 0; i < mammals.length; i++) {
             System.out.println(mammals[i].name); 
