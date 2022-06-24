@@ -1,6 +1,6 @@
 package _03_Object;
 
-public class _07_Inheritance {
+public class _07_Inheritance_IsHas {
     public static void main(String[] args) {
         Firebat firebat = new Firebat();
         firebat.move(100, 100);
