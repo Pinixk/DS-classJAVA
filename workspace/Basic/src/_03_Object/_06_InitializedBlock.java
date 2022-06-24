@@ -2,6 +2,7 @@ package _03_Object;
 
 public class _06_InitializedBlock {
     // static initialized block
+    
     // main method보다 먼저 올라감
     // 멤버변수 취급한다
     static { 
@@ -9,6 +10,7 @@ public class _06_InitializedBlock {
     }   
 
     // 초기화 블럭, instance initialized block
+    // new 로 초기화 될 때 실행
     {
         System.out.println("{ }");
     }
