@@ -1,6 +1,6 @@
 package _03_Object.extention;
 
-public class _10_Inerface {
+public class _10_Interface {
     public static void main(String[] args) {
         Mammals mammals[] = new Mammals[]{new Lion(),new Rabbit(),new Bat()};
         Birds birds[] = new Birds[]{new Eagle(),new Penguin(),new Crow()};
