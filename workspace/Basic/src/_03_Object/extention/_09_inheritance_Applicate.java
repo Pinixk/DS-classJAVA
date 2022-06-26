@@ -17,7 +17,8 @@ public class _09_Inheritance_Applicate {
         // overridng 발생
         // 묵시적으로 가능
 
-        System.out.println(buyer.money);
+        System.out.println("남은 돈 : "+buyer.money+"만원");
+        System.out.println(buyer.list[1]);
     }
 }
 
@@ -51,6 +52,7 @@ class Buyer {
     void buy(Item i) {
         if (money >= i.price)
             money -= i.price;
+        
         list[count++] = i.name;
     }
 }
