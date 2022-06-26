@@ -9,7 +9,7 @@ public class _04_Constructor {
         // class에서 생성자를 만들면 기본 생성자 못 만듬
         // 생성자 overloading으로 해결 가능      
 
-        System.out.println(foo);
+        System.out.println(foo2.getName());
     }
 }
 
@@ -17,6 +17,12 @@ class Foo {
     private String name;
 
     private String like;
+
+    public String getName() {return this.name;}
+    public void setName(String name) {this.name = name;}
+
+    public String getLike() {return this.like;}
+    public void setLike(String like) {this.like = like;}
 
     // 생성자(Counstructor), 초기화를 목적으로 함
     // method의 일종
