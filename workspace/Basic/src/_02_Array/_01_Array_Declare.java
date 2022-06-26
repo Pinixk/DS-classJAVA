@@ -1,6 +1,6 @@
 package _02_Array;
 
-public class _01_Array {
+public class _01_Array_Declare {
     public static void main(String[] args) {
         // 배열 선언 양식
         // 배열도 객체
@@ -8,7 +8,7 @@ public class _01_Array {
 
         int arr[] = new int[5];  
         // JAVA는 배열의 크기를 정해줘야 한다. 변경 불가.
-        // int 타입의 엘레먼트가 10개
+        // int 타입의 엘레먼트가 5개
         // element의 값 0(int)
 
         int arr2[] = new int[]{1,2,3,4,5};

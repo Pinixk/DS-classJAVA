@@ -10,7 +10,7 @@ public class _02_Array {
         for (int i = 0; i < cars.length; i++) {
             cars[i] = new Car(); // 인스턴스는 독립적임(각각 다른 hashcode가 배정됨)
             cars[i].num = i;
-            System.out.print(cars[i]);
+            System.out.print(cars[i]+" ");
         }
         System.out.println();
         System.out.println(Arrays.toString(cars));
@@ -19,8 +19,7 @@ public class _02_Array {
         int[] arr = new int[5];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i + 1;
-            if (i != 0)
-            System.out.print(",");
+            if (i != 0) System.out.print(",");
             System.out.print(arr[i]);
         }
         System.out.println();
