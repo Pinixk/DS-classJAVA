@@ -11,10 +11,12 @@ public class _08_Inheritance_PaCh {
         System.out.println((parent instanceof Child) ? "상속관계" : "비상속관계");
         // System.out.println((parent instanceof Firebat) ? "상속관계" : "비상속관계");
 
+        System.out.println();
+
         // Child c1 = new Parent(); // 형변환 :: 부 => 자, 부가 더 큰 개념이라 안됨
         Parent p1 = new Child();    // 형변환 :: 자 => 부
         Child c2 = (Child)p1;       // 형변환 :: 자 => 부 => 자
-        
+
         System.out.println(p1.age); // 상속관계의 형변환 시 속성은 부모 것
         p1.eat();                   // 상속관계의 형변환 시 method는 자식 것
         

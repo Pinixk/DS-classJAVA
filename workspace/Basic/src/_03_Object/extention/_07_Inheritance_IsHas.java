@@ -4,8 +4,13 @@ public class _07_Inheritance_IsHas {
     public static void main(String[] args) {
         Firebat firebat = new Firebat();
         firebat.move(100, 100);
+        System.out.println(firebat.x+"/"+firebat.y);
         firebat.steamPack();
         // 클래스 간의 관걔를 고려해야 한다.
+
+        Car car = new Car();
+        car.engine.gitong = 8;
+        System.out.println(car.engine.gitong+"기통");
     }
 }
 
@@ -33,7 +38,7 @@ class Firebat extends Unit {
 class Car {
     int wheel;
     int door;
-    Engine engine; // has a 관계
+    Engine engine = new Engine(); // has a 관계
 }
 
 class Engine {
