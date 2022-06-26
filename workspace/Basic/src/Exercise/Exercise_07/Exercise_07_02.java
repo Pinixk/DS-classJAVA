@@ -31,10 +31,10 @@ class SutdaDeck2 {
     }
   }
 
-  void shuffle2(){
-    
+  void shuffle2() {
+
     for (int i = 0; i < cards.length; i++) {
-      int rand = (int)(Math.random()*cards.length);
+      int rand = (int) (Math.random() * cards.length);
 
       SutdaCard tmp = cards[i];
       cards[i] = cards[rand];
@@ -42,13 +42,14 @@ class SutdaDeck2 {
     }
   }
 
-  SutdaCard pick2(int i){
-    if(i<0 || i>CARD_NUM) return null;
+  SutdaCard pick2(int i) {
+    if (i < 0 || i > CARD_NUM)
+      return null;
     return cards[i];
   }
 
-  SutdaCard pick2(){
-    int i = (int)(Math.random()*cards.length);
+  SutdaCard pick2() {
+    int i = (int) (Math.random() * cards.length);
     return pick2(i);
   }
 }
