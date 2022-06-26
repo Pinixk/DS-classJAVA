@@ -1,6 +1,6 @@
 package _03_Object.extention;
 
-public class _09_Inheritance_Applicate {
+public class _09_inheritance_Applicate {
     public static void main(String[] args) {
         Buyer buyer = new Buyer();
         Tv tv = new Tv();
