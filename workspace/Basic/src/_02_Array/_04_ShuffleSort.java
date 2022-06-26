@@ -12,6 +12,7 @@ public class _04_ShuffleSort {
         }
 
         System.out.println(Arrays.toString(arr)); // 초기값 출력
+        System.out.println();
 
         shuffle(arr); // shuffle, call by reference
         bubbleSort(arr); // 재정렬
