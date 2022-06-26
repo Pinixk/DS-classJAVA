@@ -9,6 +9,7 @@ public class _13_InnerClass {
 
         Outer.StaticInner os = new Outer.StaticInner();
         System.out.println(os.iv);  // 200
+        System.out.println(os.sv);  // 300
 
         outer.myMethod();   // 400
     }

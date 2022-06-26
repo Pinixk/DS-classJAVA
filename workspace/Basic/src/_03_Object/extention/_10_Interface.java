@@ -21,6 +21,8 @@ public class _10_Interface {
             public void fly() {}
         };
 
+        System.out.println();
+
         for (int i = 0; i < flyable.length; i++) {
             flyable[i].fly();
             // System.out.println(flyable[i].name);
