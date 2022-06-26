@@ -3,7 +3,7 @@ package _03_Object.composition;
 public class _03_Getter_Setter {
     public static void main(String[] args) {
         Person p = new Person();
-        p.setAge(100); 
+        p.setAge(-60); 
         // 값을 뒤에서 초기화
         // System.out.println(p.setAge(););
         System.out.println(p.getAge());
@@ -32,8 +32,8 @@ class Person {
     public void setGender(String gender) {this.gender = gender;}
 
     public void setAge(int age) {
-        if (age > 0)
-            age = this.age; // this 자신이 속한 class
+        if(age>0)
+        this.age = age; // this 자신이 속한 class
     }
 
     public int getAge() { // return type을 age와 같게 해준다
