@@ -3,8 +3,10 @@ package _03_Object.extention;
 public class _10_Interface {
     public static void main(String[] args) {
         Mammals mammals[] = new Mammals[]{new Lion(),new Rabbit(),new Bat()};
+        @SuppressWarnings("unused")
         Birds birds[] = new Birds[]{new Eagle(),new Penguin(),new Crow()};
         Flyable flyable[] = new Flyable[]{new Eagle(),new Bat(), new Crow()};
+        @SuppressWarnings("unused")
         Groundable groundable[] = new Groundable[]{new Lion(),new Rabbit(), new Penguin()};
 
         Bat bat = new Bat();
@@ -16,6 +18,7 @@ public class _10_Interface {
         // 관련 있다면 형변환을 통해 값을 담을 수 있다.
 
         // Flyable flyable2 = new Flyable(); // interface 스스로 instance 생성 불가능
+        @SuppressWarnings("unused")
         Flyable flyable2 = new Flyable(){ // 익명객체, class가 interface로 형변환
             @Override
             public void fly() {}

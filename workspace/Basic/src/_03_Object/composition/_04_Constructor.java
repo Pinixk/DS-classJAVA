@@ -1,5 +1,9 @@
 package _03_Object.composition;
 
+import java.net.Socket;
+
+import javax.swing.event.SwingPropertyChangeSupport;
+
 public class _04_Constructor {
     public static void main(String[] args) {
         Foo foo = new Foo(); // 기본 생성자, JVM이 생성함
@@ -7,13 +11,15 @@ public class _04_Constructor {
         // class에서 생성자를 만들면 기본 생성자 못 만듬
         // 생성자 overloading으로 해결 가능
 
-        
+        foo.name(KBJ);
         
     }
 }
 
 class Foo {
+    @SuppressWarnings("unused")
     private String name;
+    @SuppressWarnings("unused")
     private String like;
 
     // 생성자(Counstructor), 초기화를 목적으로 함
@@ -30,4 +36,5 @@ class Foo {
         this.name = name;
         this.like = like;
     }   // 매개변수가 있는 생성자
+
 }

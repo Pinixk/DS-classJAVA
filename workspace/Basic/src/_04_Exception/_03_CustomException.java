@@ -9,7 +9,7 @@ public class _03_CustomException {
             try {
                 throw new Exception();
             } catch (Exception e2) {
-                //TODO: handle exception
+                
             }
         }
     }

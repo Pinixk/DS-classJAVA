@@ -24,5 +24,6 @@ public class Exercise_05_06 {
          else
             System.out.printf("틀렸습니다 %n%n");
       }
+      scanner.close();
    }
 }

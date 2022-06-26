@@ -32,7 +32,9 @@ class Marine{
     public int getHp() { return this.hp; }
     public void setHp(int hp) { this.hp = hp; }
 
+    @SuppressWarnings("static-access")
     public int getAttackLv() { return this.attLv;}
+    @SuppressWarnings("static-access")
     public void setAttLv(int attLv) { this.attLv = attLv; }
 
     @Override

@@ -1,6 +1,7 @@
 package Exercise.Exercise_07;
 
 class MyTv2 {
+  @SuppressWarnings("unused")
   private boolean isPowerOn;
   private int channel;
   private int volume;

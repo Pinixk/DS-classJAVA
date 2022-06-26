@@ -15,5 +15,7 @@ public class _04_InputEx {
         // window 방식
         input = JOptionPane.showInputDialog(null, "당신의 이름을 입력하세요");
         System.out.println(input + "을 격하게 환영합니다");
+
+        s.close();
     }
 }

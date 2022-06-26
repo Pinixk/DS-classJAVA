@@ -23,6 +23,6 @@ public class Exercise_04_07 {
             sum += (c>='0' && c<='9') ? c-'0': 0 ;
         }
         System.out.println("sum=" + sum);
-
+        s.close();
     }
 }

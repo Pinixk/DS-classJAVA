@@ -7,6 +7,7 @@ public class _06_StringEqual {
         String id = "admin";
         System.out.println("ID를 입력하세요");
 
+        @SuppressWarnings("resource")
         String input = new Scanner(System.in).nextLine();
         // if (input == id) {   // 주소값이 달라서 같아고 할 수 없다.
         if (input.equals(id)) {
@@ -24,5 +25,7 @@ public class _06_StringEqual {
         System.out.println(str3.hashCode());   // str3의 주소값을 볼 수 있음
         System.out.println(str4.hashCode());
         System.out.println(str3 == str4 ? "같아요" : "달라요");
+
+        
     }
 }

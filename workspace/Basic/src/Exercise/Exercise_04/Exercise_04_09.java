@@ -38,6 +38,6 @@ public class Exercise_04_09 {
             }
         }
         System.out.println("sum=" + sum);
-
+        s.close();
     }
 }

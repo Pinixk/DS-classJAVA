@@ -25,6 +25,8 @@ public class Exercise_04_10 {
                 System.out.println("시도횟수는" + count + "번입니다");
                 break; // do-while문을 벗어난다
             }
+
+            s.close();
         } while (true); // 무한반복문
 
     }
