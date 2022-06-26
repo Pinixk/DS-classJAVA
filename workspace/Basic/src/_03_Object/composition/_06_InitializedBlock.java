@@ -27,6 +27,8 @@ public class _06_InitializedBlock {
         System.out.println("_06_InitializedBlock i1 생성");
         _06_InitializedBlock i1 = new _06_InitializedBlock();
 
+        System.out.println();
+
         System.out.println("_06_InitializedBlock i2 생성");
         _06_InitializedBlock i2 = new _06_InitializedBlock();
     }

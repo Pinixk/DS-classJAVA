@@ -3,7 +3,7 @@ package _03_Object.composition;
 public class _03_Getter_Setter {
     public static void main(String[] args) {
         Person p = new Person();
-        p.setAge(-100); 
+        p.setAge(100); 
         // 값을 뒤에서 초기화
         // System.out.println(p.setAge(););
         System.out.println(p.getAge());

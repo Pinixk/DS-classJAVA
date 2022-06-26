@@ -6,6 +6,9 @@ public class _04_Constructor {
         Foo foo2 = new Foo("곰돌이", "꿀");
         // class에서 생성자를 만들면 기본 생성자 못 만듬
         // 생성자 overloading으로 해결 가능
+
+        System.out.println(foo);
+        System.out.println(foo2);
     }
 }
 
