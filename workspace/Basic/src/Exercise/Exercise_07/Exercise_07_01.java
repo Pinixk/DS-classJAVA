@@ -26,8 +26,9 @@ class SutdaDeck {
 }
 
 class SutdaCard {
-    int num;
-    boolean isKwang;
+    // 속성
+    private int num;
+    private boolean isKwang;
 
     SutdaCard() {
         this(1, true);
@@ -38,7 +39,9 @@ class SutdaCard {
         this.isKwang = isKwang;
     }
 
+    @Override
     public String toString() {
         return num + (isKwang ? "K" : "");
     }
+    
 }
