@@ -23,6 +23,10 @@ class SutdaCard2 {
     this.isKwang = isKwang;
   }
 
+  public String toString() {
+    return num + (isKwang ? "K" : "");
+  }
+
   @Override
   public boolean equals(Object obj2) {
     if (obj2 instanceof SutdaCard2) {
@@ -30,10 +34,6 @@ class SutdaCard2 {
       return num == tmp.num && isKwang == tmp.isKwang;
     }
     return false;
-  }
-
-  public String toString() {
-    return num + (isKwang ? "K" : "");
   }
 
 }
