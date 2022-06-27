@@ -5,6 +5,8 @@ public class _01_Equals {
     Value v1 = new Value(10);
     Value v2 = new Value(10);
 
+    System.out.println(v1.hashCode());  // 2104457164
+    System.out.println(v2.hashCode());  // 1521118594
     System.out.println(v1 == v2);
     System.out.println(v1.equals(v2));
   }
