@@ -1,7 +1,7 @@
 package Exercise.Exercise_07;
 
-class Outer1 { // 외부 클래스
-  static class Inner1 { // (static ) 내부 클래스 클래스
+class Outer1 {          // 외부 클래스
+  static class Inner1 { // (static) 내부 클래스
     int iv = 200;
   }
 }

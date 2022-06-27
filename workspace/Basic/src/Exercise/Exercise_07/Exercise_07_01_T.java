@@ -5,7 +5,6 @@ public class Exercise_07_01_T {
     CardDeckT deckT = new CardDeckT();
     deckT.printDeckT();
     deckT.suffleT();
-    deckT.printDeckT();
   }
 }
 
@@ -38,8 +37,8 @@ class CardDeckT {
   public CardDeckT() {
     for (int i = 0; i < cardsT.length; i++) {
       cardsT[i] = new SutdaCardT(
-          i % 10 + 1,
-          (i < 10) && (i == 0 || i == 2 || i == 7) ? true : false);
+        i % 10 + 1,
+        (i < 10) && (i == 0 || i == 2 || i == 7) ? true : false);
     }
   }
 
@@ -61,5 +60,7 @@ class CardDeckT {
       cardsT[i] = cardsT[randT];
       cardsT[randT] = tmpT;
     }
+    printDeckT();
+
   }
 }
