@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class _02_String {
   public static void main(String[] args) {
+    
     String str2 = "Hello";
     String str = new String("Hello");
 
