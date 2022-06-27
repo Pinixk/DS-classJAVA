@@ -25,7 +25,6 @@ public class _06_StringEqual {
         System.out.println(str3.hashCode());   // str3의 주소값을 볼 수 있음
         System.out.println(str4.hashCode());
         System.out.println(str3 == str4 ? "같아요" : "달라요");
-
         
     }
 }
