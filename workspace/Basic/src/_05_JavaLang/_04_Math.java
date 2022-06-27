@@ -61,8 +61,11 @@ public class _04_Math {
     System.out.println(Integer.toHexString(10));    // 10진수를 아스키코드로 변환
     System.out.println();
     
+    @SuppressWarnings("unused")
     int num = Integer.parseInt("10");   // 참조형 => 일반형, Unboxing
+    @SuppressWarnings("unused")
     Integer i4 = Integer.valueOf(10); // 참조형 => 참조형
+    @SuppressWarnings("unused")
     Integer i5 = 10;  // 일반형 => 참조형, Autoboxing
 
     // Autoboxing과 unboxing은 암묵적으로 처리됨

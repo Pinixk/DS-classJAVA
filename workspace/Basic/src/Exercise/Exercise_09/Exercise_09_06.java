@@ -28,9 +28,9 @@ class SutdaCard2 {
   }
 
   @Override
-  public boolean equals(Object obj2) {
-    if (obj2 instanceof SutdaCard2) {
-      SutdaCard2 tmp = (SutdaCard2) obj2;
+  public boolean equals(Object obj) {
+    if (obj instanceof SutdaCard2) {
+      SutdaCard2 tmp = (SutdaCard2) obj;
       return num == tmp.num && isKwang == tmp.isKwang;
     }
     return false;
