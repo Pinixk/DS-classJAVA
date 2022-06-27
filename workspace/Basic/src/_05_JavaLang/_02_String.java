@@ -1,10 +1,11 @@
 package _05_JavaLang;
 
 import java.util.Arrays;
+import java.util.StringJoiner;
 
 public class _02_String {
   public static void main(String[] args) {
-    
+
     String str2 = "Hello";
     String str = new String("Hello");
 
@@ -46,6 +47,10 @@ public class _02_String {
     System.out.println(0b10); // 2진수
     System.out.println(0010); // 8진수
     System.out.println(0x10); // 16진수
+
+    StringJoiner sj = new StringJoiner("/","[","]");
+    for(String s: arr) sj.add(s);
+    System.out.println(sj.toString());
     
   }
 }
