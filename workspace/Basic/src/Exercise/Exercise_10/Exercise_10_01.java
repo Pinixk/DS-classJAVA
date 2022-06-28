@@ -11,7 +11,7 @@ public class Exercise_10_01 {
 
       for (int i = 0; i < 12; i++) {
          int sunday = cal.get(Calendar.DAY_OF_WEEK);
-         int secSun = (sunday==1) ? 8 : (16-sunday) ;
+         int secSun = (sunday==1) ? 8 : (16-sunday) ; // 왜 16일까
 
          cal.set(Calendar.DAY_OF_MONTH, secSun);
 
