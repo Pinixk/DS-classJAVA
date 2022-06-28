@@ -1,17 +1,17 @@
 package _07_Collection;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class _01_List {
    public static void main(String[] args) {
       
       // generics 비설정
-      @SuppressWarnings("rawtypes")
       ArrayList al = new ArrayList();
-      // al.add(new Date()); 
-      // al.add("Hello");
-      // al.add(true);
-      // al.add(1);
+      al.add(new Date()); 
+      al.add("Hello");
+      al.add(true);
+      al.add(1);
       al.clear();
       System.out.println(al);
 
