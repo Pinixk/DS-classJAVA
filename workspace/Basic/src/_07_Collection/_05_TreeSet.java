@@ -6,6 +6,7 @@ import java.util.TreeSet;
 
 public class _05_TreeSet {
    public static void main(String[] args) {
+
       Set lotto = new TreeSet();
 
       while (lotto.size() < 7) {
@@ -13,7 +14,6 @@ public class _05_TreeSet {
          lotto.add(ball);
       }
       System.out.println(lotto);
-
 
 
       Set set = new TreeSet();
@@ -39,6 +39,7 @@ class Ball implements Comparable{
       this.color = color;
    }
 
+   // num 사용 compareTo
    // @Override
    // public int compareTo(Object o) {
    //    Ball tmp = (Ball)o;
@@ -47,12 +48,14 @@ class Ball implements Comparable{
    //    else return -1;
    // }
 
+   // color 사용 compareTo
    @Override
    public int compareTo(Object o) {
       Ball tmp = (Ball)o;
       return -(tmp.color.compareTo(color));
    }
 
+   // equals 방법 1)
    // @Override
    // public boolean equals(Object obj) {
    // if (obj instanceof Ball) {
@@ -62,6 +65,7 @@ class Ball implements Comparable{
    // return false;
    // }
 
+   // equals 방법 2)
    @Override
    public boolean equals(Object obj) {
       if (!(obj instanceof Ball))
