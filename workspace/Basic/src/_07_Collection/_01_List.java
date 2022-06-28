@@ -2,6 +2,8 @@ package _07_Collection;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 public class _01_List {
    public static void main(String[] args) {
@@ -25,8 +27,9 @@ public class _01_List {
 
       int total = 0;
       for (int i : list) { 
-      // generics를 int로 설정했기에 int로 받을 수 있음
-      // generics 설정 안 했을 시 Object로 받을 수 있음
+         // generics를 int로 설정했기에 int로 받을 수 있음
+         // generics 설정 안 했을 시 Object로 받을 수 있음
+         
          total += i;
       }
 
@@ -38,5 +41,11 @@ public class _01_List {
 
       System.out.println(list);
       System.out.println(total);
+
+      Iterator it = list.iterator();
+      while(it.hasNext()){
+         System.out.print(it.next()+" ");
+      }
+
    }
 }
