@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class _02_PrintCalendar {
   public static void main(String[] args) {
 
+    @SuppressWarnings("resource")
     Scanner s = new Scanner(System.in);
     System.out.println();
     System.out.println("달력 출력 프로그램입니다.(종료는 q,Q)");
