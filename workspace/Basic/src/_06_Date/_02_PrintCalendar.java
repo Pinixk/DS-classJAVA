@@ -7,12 +7,19 @@ public class _02_PrintCalendar {
   public static void main(String[] args) {
 
     Scanner s = new Scanner(System.in);
+    System.out.println();
     System.out.println("달력 출력 프로그램입니다.(종료는 q,Q)");
 
     do {
+      System.out.println();
       System.out.print("원하는 달력의 연도와 월을 입력하시오(예 2022 06)");
       String input = s.nextLine();
       String[] arr = input.split(" ");
+      // 종료
+      if (input.equalsIgnoreCase("q")) {
+        System.out.println("Bye");
+        System.exit(-1);
+      }
 
       // 입력값이 2개가 아닐 때
       if (arr.length != 2) {
@@ -40,20 +47,24 @@ public class _02_PrintCalendar {
       final int EDAY = endDay.get(Calendar.DATE);
       final int SDAY = startDay.get(Calendar.DAY_OF_WEEK);
 
-      System.out.println("   " + year + "-" + (month - 1));
-      System.out.println("   SU MO TU WE TH FR SA");
+      System.out.println();
+      System.out.println("      " + year + "년 " + month + "월");
+      System.out.println(" SU MO TU WE TH FR SA");
 
-      for (int i = 0; i < args.length; i++) {
-
+      int cnt = 0;
+      for (int i = 1; i < SDAY; i++) {
+        System.out.printf("%s", "   ");
+        cnt++;
       }
-
-      // 종료
-      if (input.equalsIgnoreCase("q")) {
-        System.out.println("Bye");
-        System.exit(-1);
+      for (int i = 1; i <= EDAY; i++) {
+        if (cnt++ % 7 == 0) {
+          if (cnt > 7)
+            System.out.println();
+        }
+        System.out.printf("%3d", i);
       }
+      System.out.println();
 
-      s.close();
     } while (true);
   }
 }
