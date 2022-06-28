@@ -1,5 +1,6 @@
 package _07_Collection;
 
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -16,7 +17,6 @@ public class _01_List {
       al.add(1);
       al.clear();
       System.out.println(al);
-
 
       // generics 설정
       ArrayList<Integer> list = new ArrayList<>();
@@ -46,6 +46,8 @@ public class _01_List {
       while(it.hasNext()){
          System.out.print(it.next()+" ");
       }
-
+      
+      List list2 = new ArrayList();
+      list2 = new LinkedList<>();
    }
 }

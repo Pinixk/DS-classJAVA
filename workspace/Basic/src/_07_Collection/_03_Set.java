@@ -13,13 +13,13 @@ public class _03_Set {
       set.add(3);
       set.add(4);
       Iterator it = set.iterator();
-      while(it.hasNext()){
-         System.out.print(it.next()+",");
+      while (it.hasNext()) {
+         System.out.print(it.next() + ",");
       }
 
       Set lotto = new HashSet<>();
-      while(lotto.size()<7){
-         int ball = (int)(Math.random()*45)+1;
+      while (lotto.size() < 7) {
+         int ball = (int) (Math.random() * 45) + 1;
          lotto.add(ball);
       }
       System.out.println();
