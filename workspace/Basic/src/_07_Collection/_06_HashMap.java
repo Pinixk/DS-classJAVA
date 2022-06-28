@@ -1,8 +1,6 @@
 package _07_Collection;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class _06_HashMap {
    public static void main(String[] args) {
