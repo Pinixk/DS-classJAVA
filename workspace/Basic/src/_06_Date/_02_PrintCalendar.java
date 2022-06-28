@@ -39,6 +39,7 @@ public class _02_PrintCalendar {
         continue;
       }
 
+      // 달력 뽑기
       Calendar startDay = Calendar.getInstance();
       Calendar endDay = Calendar.getInstance();
       startDay.set(year, month - 1, 1);
