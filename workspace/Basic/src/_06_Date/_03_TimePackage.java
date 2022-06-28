@@ -23,9 +23,9 @@ public class _03_TimePackage {
       System.out.println(date); // 2022-06-28
       @SuppressWarnings("static-access")
       LocalDate localDate = date.of(2100, 6, 1);
-      localDate = localDate.plus(1, ChronoUnit.DAYS);
-      localDate = localDate.plusDays(1);
-      localDate = localDate.minusMonths(1);
+      localDate = localDate.plus(1, ChronoUnit.DAYS); // 날짜 +1
+      localDate = localDate.plusDays(1);                // 날짜 +1
+      localDate = localDate.minusMonths(1);      // 월 -1
       System.out.println(localDate); // 2100-06-01
 
       LocalTime time = LocalTime.now();
