@@ -9,10 +9,10 @@ public class _07_Thread_join_yield {
 		t1.start();
 		t2.start();
 		try {
-			// t1.join();// main쓰레드가 t1이 끝날때 까지 기다린다.
-			// t2.join();// main쓰레드가 t2이 끝날때 까지 기다린다.
-			t1.yield();//t1이 양보한다.
-			t2.yield();//t2이 양보한다ㅏ.
+			t1.join();// main쓰레드가 t1이 끝날때 까지 기다린다.
+			t2.join();// main쓰레드가 t2이 끝날때 까지 기다린다.
+			// t1.yield();//t1이 양보한다.
+			// t2.yield();//t2이 양보한다.
 		} catch (Exception e) {}
 		System.out.print("소요시간: " + (System.currentTimeMillis() - _07_Thread_join_yield.startTime));
 	}
