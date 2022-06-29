@@ -21,13 +21,18 @@ public class _07_HashMap {
 
    private static void printList(){
 
+      @SuppressWarnings("all")
       Iterator it = phoneBooks.entrySet().iterator();
       while(it.hasNext()){
+         @SuppressWarnings("all")
          Map.Entry e = (Map.Entry) it.next();
+         @SuppressWarnings("all")
          Set subSet = ((HashMap)e.getValue()).entrySet();
+         @SuppressWarnings("all")
          Iterator subIt = subSet.iterator();
          System.out.println(" * "+e.getKey()+"["+subSet.size()+"]");
          while(subIt.hasNext()){
+            @SuppressWarnings("all")
             Map.Entry subE = (Map.Entry) subIt.next();
             String telNo = (String) subE.getKey();
             String name = (String) subE.getValue();
@@ -40,6 +45,7 @@ public class _07_HashMap {
 
    static void addPhoneNo(String groupName, String name, String tel) {
       addGroup(groupName);
+      @SuppressWarnings("all")
       HashMap<Object,Object> group = (HashMap) phoneBooks.get(groupName);
       group.put(tel, name);
    }
