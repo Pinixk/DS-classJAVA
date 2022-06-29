@@ -44,8 +44,8 @@ class Ball implements Comparable{
    // @Override
    // public int compareTo(Object o) {
    //    Ball tmp = (Ball)o;
-   //    if(tmp.num<num) return 1;
-   //    else if(tmp.num==num) return 0;
+   //    if(num>tmp.num) return 1;
+   //    else if(num==tmp.num) return 0;
    //    else return -1;
    // }
 
