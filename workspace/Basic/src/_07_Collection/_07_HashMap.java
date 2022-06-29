@@ -21,7 +21,7 @@ public class _07_HashMap {
 
    private static void printList(){
 
-      Iterator<> it = phoneBooks.entrySet().iterator();
+      Iterator it = phoneBooks.entrySet().iterator();
       while(it.hasNext()){
          Map.Entry e = (Map.Entry) it.next();
          Set subSet = ((HashMap)e.getValue()).entrySet();
@@ -40,7 +40,7 @@ public class _07_HashMap {
 
    static void addPhoneNo(String groupName, String name, String tel) {
       addGroup(groupName);
-      HashMap group = (HashMap) phoneBooks.get(groupName);
+      HashMap<Object,Object> group = (HashMap) phoneBooks.get(groupName);
       group.put(tel, name);
    }
 
