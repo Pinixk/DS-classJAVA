@@ -1,6 +1,6 @@
 package _09_thread;
 
-public class _02_Thread_Single {
+public class _02_SingleThread {
    public static void main(String[] args) {
       long startTime = System.currentTimeMillis(); // 시작
 

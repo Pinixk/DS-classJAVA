@@ -2,7 +2,7 @@ package _09_thread;
 
 import javax.swing.JOptionPane;
 
-public class _04_Thread_blocking {
+public class _04_Blocking {
    public static void main(String[] args) {
       Bomb b = new Bomb();
       b.start();
