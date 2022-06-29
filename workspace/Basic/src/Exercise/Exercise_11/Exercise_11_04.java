@@ -10,6 +10,7 @@ class Exercise_11_04 {
       list.add(new Student("홍길동", 1, 3, 100, 100, 100));
       list.add(new Student("남궁성", 1, 1, 90, 70, 80));
       list.add(new Student("김봉조", 1, 2, 80, 80, 90));
+      
       Collections.sort(list, new BanNoAscending());
       Iterator<?> it = list.iterator();
       while (it.hasNext())
@@ -52,7 +53,7 @@ class Student {
             + "," + getTotal()
             + "," + getAverage();
    }
-} 
+}
 
 @SuppressWarnings("all")
 class BanNoAscending implements Comparator {
