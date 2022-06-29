@@ -2,7 +2,7 @@ package Exercise.Exercise_11;
 
 import java.util.*;
 
-class Exercise11_4 {
+class Exercise_11_04 {
    public static void main(String[] args) {
       ArrayList<Object> list = new ArrayList<>();
       list.add(new Student("이자바", 2, 1, 70, 90, 70));
@@ -11,7 +11,7 @@ class Exercise11_4 {
       list.add(new Student("남궁성", 1, 1, 90, 70, 80));
       list.add(new Student("김봉조", 1, 2, 80, 80, 90));
       Collections.sort(list, new BanNoAscending());
-      Iterator it = list.iterator();
+      Iterator<?> it = list.iterator();
       while (it.hasNext())
          System.out.println(it.next());
    }
@@ -54,6 +54,7 @@ class Student {
    }
 } 
 
+@SuppressWarnings("all")
 class BanNoAscending implements Comparator {
    public int compare(Object o1, Object o2) {
       if (o1 instanceof Student && o2 instanceof Student) {
