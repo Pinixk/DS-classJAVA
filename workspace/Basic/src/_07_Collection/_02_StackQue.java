@@ -6,8 +6,8 @@ import java.util.Stack;
 
 public class _02_StackQue {
    public static void main(String[] args) {
-      Stack stack = new Stack<>();
-      Queue q = new LinkedList<>();
+      Stack<Object> stack = new Stack<>();
+      Queue<Object> q = new LinkedList<>();
 
       stack.push(0);
       stack.push(1);

@@ -10,7 +10,7 @@ public class _01_List {
    public static void main(String[] args) {
       
       // generics 비설정
-      ArrayList al = new ArrayList();
+      ArrayList<Object> al = new ArrayList<>();
       al.add(new Date()); 
       al.add("Hello");
       al.add(true);
@@ -42,11 +42,13 @@ public class _01_List {
       System.out.println(list);
       System.out.println(total);
 
+      @SuppressWarnings("all")
       Iterator it = list.iterator();
       while(it.hasNext()){
          System.out.print(it.next()+" ");
       }
       
+      @SuppressWarnings("all")
       List list2 = new ArrayList();
       list2 = new LinkedList<>();
    }

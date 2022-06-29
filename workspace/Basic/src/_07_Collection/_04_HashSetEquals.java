@@ -6,7 +6,8 @@ import java.util.Set;
 
 public class _04_HashSetEquals {
    public static void main(String[] args) {
-      Set set = new HashSet();
+
+      Set<Object> set = new HashSet<>();
       set.add(new Person("Hulk", "male"));
       set.add(new Person("Hulk", "male"));
 

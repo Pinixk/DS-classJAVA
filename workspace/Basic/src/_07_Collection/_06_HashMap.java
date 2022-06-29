@@ -5,7 +5,7 @@ import java.util.*;
 public class _06_HashMap {
    public static void main(String[] args) {
 
-      Map map = new HashMap();
+      Map<Object,Object> map = new HashMap<>();
       map.put("admin","1234");
 
       map.put("user","1111"); 
@@ -14,8 +14,10 @@ public class _06_HashMap {
       System.out.println();
 
       // key, value 모두 호출
+      @SuppressWarnings("all")
       Iterator it = map.entrySet().iterator();
       while(it.hasNext()){
+         @SuppressWarnings("all")
          Map.Entry entry = (Map.Entry) it.next();
          System.out.println(entry.getKey()+" : "+ entry.getValue());
       }

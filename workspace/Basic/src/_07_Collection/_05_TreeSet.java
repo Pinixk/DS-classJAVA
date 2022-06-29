@@ -7,7 +7,7 @@ import java.util.TreeSet;
 public class _05_TreeSet {
    public static void main(String[] args) {
 
-      Set lotto = new TreeSet();
+      Set<Object> lotto = new TreeSet<>();
 
       while (lotto.size() < 7) {
          int ball = (int) (Math.random() * 45) + 1;
@@ -16,7 +16,7 @@ public class _05_TreeSet {
       System.out.println(lotto);
 
 
-      Set set = new TreeSet();
+      Set<Object> set = new TreeSet<>();
       Ball[] balls = new Ball[5];
       int[] nums = { 2, 4, 5, 3, 1 };
       String[] colors = { "Black", "Navy", "Green", "Pink", "Red" };
@@ -30,6 +30,7 @@ public class _05_TreeSet {
    }
 }
 
+@SuppressWarnings("all")
 class Ball implements Comparable{
    int num;
    String color;
