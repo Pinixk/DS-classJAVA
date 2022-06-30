@@ -15,9 +15,8 @@ public class _01_Stream {
          new Student("감자바", 3, 180)
       );
 
-      studentStream.sorted(Comparator.comparing(Student::getBan)
-         .thenComparing(Comparator.naturalOrder()))
-         .forEach(System.out::println);
+      studentStream.sorted(Comparator.comparing(Student::getBan).thenComparing(Comparator.naturalOrder())
+      ).forEach(System.out::println);
    }
 }
 
