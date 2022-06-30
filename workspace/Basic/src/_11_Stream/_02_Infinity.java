@@ -1,8 +1,13 @@
 package _11_Stream;
 
+import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
@@ -34,7 +39,20 @@ public class _02_Infinity {
       generatorStream.limit(5).forEach(System.out::println);
       System.out.println();
 
-      Stream<Path> fileList = Files.list(".");
-      
+      String directory = "C:/";
+      try {
+         // Stream<Path> fileLiStream
+         List<File> files = Files.list(Paths.get(directory))
+         .map(Path::toFile)
+         .filter(File::isFile)
+         .collect(Collectors.toList());
+         files.forEach(System.out::println);
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
+
+      //empty stream
+      Stream emptyStream = Stream.empty();
+      System.out.println(emptyStream.count());
    }
 }
