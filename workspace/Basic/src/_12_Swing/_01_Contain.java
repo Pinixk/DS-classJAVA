@@ -2,6 +2,7 @@ package _12_Swing;
 
 import javax.swing.*;
 import java.awt.event.*;
+import java.awt.*;
 
 public class _01_Contain {
   public static void main(String[] args) {
@@ -12,9 +13,13 @@ public class _01_Contain {
 
 class MyFrame extends BaseFrm {
   private JButton btnNorth, btnSouth, btnEast, btnWest, btnCenter;
+  private JPanel pnlCenter;
 
   @Override
   public void init() {
+    pnlCenter = new JPanel();
+    // pnlCenter.setLayout(new BorderLayout());
+
     btnNorth = new JButton("북");
     btnSouth = new JButton("남");
     btnWest = new JButton("서");
@@ -33,6 +38,9 @@ class MyFrame extends BaseFrm {
     add(btnSouth, "South");
     add(btnWest, "West");
     add(btnEast, "East");
-    add(btnCenter, "Center");
+
+    pnlCenter.add(btnEast);
+    pnlCenter.add(btnCenter);
+    add(pnlCenter, "Center");
   }
 }

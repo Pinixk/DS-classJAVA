@@ -7,7 +7,7 @@ public abstract class BaseFrm extends JFrame { // abstract 인스턴스 상속 �
   private int width, height;
 
   public BaseFrm() {
-    this(600, 500);
+    this(600, 400);
   }
   public BaseFrm(int width, int height) {
     this.width = width;
