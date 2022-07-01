@@ -12,7 +12,7 @@ public class _02_FileEx1 {
 		if (ret == 0) {
 			File f = fc.getSelectedFile();
 			System.out.println("FileName: "+f.getName());
-			System.out.println("Extend: "+
+			System.out.println("Extend of File: "+
 						f.getName().substring(f.getName().lastIndexOf(".")+1));
 			System.out.println("path: "+f.getPath());
 			System.out.println("Absolute path: "+f.getAbsolutePath());
