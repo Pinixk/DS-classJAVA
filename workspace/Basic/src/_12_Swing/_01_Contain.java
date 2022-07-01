@@ -1,7 +1,6 @@
 package _12_Swing;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
 
 public class _01_Contain {
