@@ -3,17 +3,14 @@ package _12_Swing;
 import javax.swing.JFrame;
 
 // final 상속 불가
-public abstract class BaseFrm extends JFrame{ // abstract 인스턴스 상속 불가
+public abstract class BaseFrm extends JFrame { // abstract 인스턴스 상속 불가
   private int width, height;
 
   public BaseFrm() {
-    this("MyFrame", 600, 500);
+    this(600, 400);
   }
 
-  public BaseFrm(String title) {this(title, 600, 400);}
-
-  public BaseFrm(String title, int width, int height) {
-    super(title);
+  public BaseFrm(int width, int height) {
     this.width = width;
     this.height = height;
     init();
@@ -22,6 +19,7 @@ public abstract class BaseFrm extends JFrame{ // abstract 인스턴스 상속 �
   }
 
   public abstract void init();
+
   public abstract void arrange();
 
   public void inflate() {
@@ -32,4 +30,3 @@ public abstract class BaseFrm extends JFrame{ // abstract 인스턴스 상속 �
     setVisible(true); // 가시성
   };
 }
-

@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-import gui.BaseFrm;
+import _12_Swing.BaseFrm;
 
 public class _04_FileRW {
 	public static void main(String[] args) {
