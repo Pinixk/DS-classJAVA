@@ -2,7 +2,6 @@ package _12_Swing;
 
 import javax.swing.*;
 import java.awt.event.*;
-import java.awt.*;
 
 public class _01_Contain {
   public static void main(String[] args) {
