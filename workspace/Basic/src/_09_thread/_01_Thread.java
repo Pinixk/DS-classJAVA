@@ -2,6 +2,9 @@ package _09_Thread;
 
 public class _01_Thread {
    public static void main(String[] args) {
+      // Thread
+      // LIFO
+      
       System.out.println("Main Thread Started");
 
       // Tread class 적용법
@@ -39,7 +42,7 @@ class MyRunnable implements Runnable {
    @Override
    public void run() {
       try {
-         Thread.sleep(1500);
+         Thread.sleep(1800);
          System.out.println("finished Runnable");
       } catch (Exception e) {
          System.out.println(e.getMessage());
