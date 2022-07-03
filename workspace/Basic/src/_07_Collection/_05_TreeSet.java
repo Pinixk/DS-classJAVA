@@ -30,7 +30,6 @@ public class _05_TreeSet {
    }
 }
 
-@SuppressWarnings("all")
 class Ball implements Comparable{
    int num;
    String color;

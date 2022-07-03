@@ -3,10 +3,8 @@ package _03_Object.extention;
 public class _10_Interface {
     public static void main(String[] args) {
         Mammals mammals[] = new Mammals[]{new Lion(),new Rabbit(),new Bat()};
-        @SuppressWarnings("unused")
         Birds birds[] = new Birds[]{new Eagle(),new Penguin(),new Crow()};
         Flyable flyable[] = new Flyable[]{new Eagle(),new Bat(), new Crow()};
-        @SuppressWarnings("unused")
         Groundable groundable[] = new Groundable[]{new Lion(),new Rabbit(), new Penguin()};
 
         Bat bat = new Bat();

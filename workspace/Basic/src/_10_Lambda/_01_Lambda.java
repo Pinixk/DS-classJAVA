@@ -54,8 +54,6 @@ public class _01_Lambda {
       f1.run();
       f2.run();
 
-      
-
       JButton btn = new JButton("Confirm");
       // lambda식
       btn.addActionListener(e -> System.out.println("hello"));

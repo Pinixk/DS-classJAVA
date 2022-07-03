@@ -42,13 +42,11 @@ public class _01_List {
       System.out.println(list);
       System.out.println(total);
 
-      @SuppressWarnings("all")
       Iterator it = list.iterator();
       while(it.hasNext()){
          System.out.print(it.next()+" ");
       }
       
-      @SuppressWarnings("all")
       List list2 = new ArrayList();
       list2 = new LinkedList<>();
    }

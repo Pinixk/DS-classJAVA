@@ -8,7 +8,8 @@ public class _02_StackQue {
    public static void main(String[] args) {
       Stack<Object> stack = new Stack<>();
       Queue<Object> q = new LinkedList<>();
-
+      
+      // stack LIFO
       stack.push(0);
       stack.push(1);
       stack.push(2);
@@ -17,6 +18,7 @@ public class _02_StackQue {
       // stack.pop();
       System.out.println(stack);
 
+      // queue FIFO
       q.offer(0);
       q.offer(1);
       q.offer(2);
