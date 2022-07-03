@@ -1,4 +1,4 @@
-package _09_thread;
+package _09_Thread;
 
 public class _07_Thread_join_yield {
 	static long startTime = System.currentTimeMillis();

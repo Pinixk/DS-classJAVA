@@ -1,4 +1,4 @@
-package _09_thread;
+package _09_Thread;
 
 public class _02_SingleThread {
    public static void main(String[] args) {

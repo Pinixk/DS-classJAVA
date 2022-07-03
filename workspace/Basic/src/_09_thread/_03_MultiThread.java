@@ -1,4 +1,4 @@
-package _09_thread;
+package _09_Thread;
 
 public class _03_MultiThread {
    static long startTime = 0;

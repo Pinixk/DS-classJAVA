@@ -1,4 +1,4 @@
-package _09_thread;
+package _09_Thread;
 
 public class _05_Daemon implements Runnable {
    static boolean autoSave = false;

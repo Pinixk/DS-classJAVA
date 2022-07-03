@@ -1,4 +1,4 @@
-package _09_thread;
+package _09_Thread;
 
 import java.util.ArrayList;
 

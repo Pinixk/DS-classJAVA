@@ -1,4 +1,4 @@
-package _09_thread;
+package _09_Thread;
 
 public class _06_Thread_suspend_resume_stop {
 	public static void main(String[] args) {
