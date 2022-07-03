@@ -1,0 +1,19 @@
+package Swing;
+
+public class InputTable extends BaseFrm{
+
+	public static void main(String[] args) {
+
+	}
+
+	@Override
+	public void init() {
+		
+	}
+
+	@Override
+	public void arrange() {
+		
+	}
+
+}

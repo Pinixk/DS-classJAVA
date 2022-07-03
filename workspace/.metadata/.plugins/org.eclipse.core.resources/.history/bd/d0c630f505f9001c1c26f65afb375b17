@@ -1,0 +1,66 @@
+package Swing;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
+import javax.swing.JTable;
+
+public class InputTable extends BaseFrm{
+	private JTextField textField;
+	private JPasswordField passwordField;
+	private JTable table;
+	
+	public static void main(String[] args) {
+		new InputTable();
+	}
+	
+	public InputTable() {
+	
+	}
+
+	@Override
+	public void init() {
+		getContentPane().setLayout(null);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("굴림", Font.PLAIN, 20));
+		textField.setBounds(46, 11, 102, 35);
+		getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JLabel lbID = new JLabel("ID");
+		lbID.setFont(new Font("Dialog", Font.PLAIN, 20));
+		lbID.setBounds(12, 10, 33, 35);
+		getContentPane().add(lbID);
+		
+		JLabel lbPass = new JLabel("Pass");
+		lbPass.setFont(new Font("Dialog", Font.PLAIN, 20));
+		lbPass.setBounds(160, 10, 52, 34);
+		getContentPane().add(lbPass);
+		
+		passwordField = new JPasswordField();
+		passwordField.setFont(new Font("굴림", Font.PLAIN, 20));
+		passwordField.setBounds(212, 11, 102, 34);
+		getContentPane().add(passwordField);
+		
+		JButton btnJoin = new JButton("Add");
+		btnJoin.setFont(new Font("굴림", Font.PLAIN, 20));
+		btnJoin.setBounds(326, 11, 92, 35);
+		getContentPane().add(btnJoin);
+		
+		JButton btnDel = new JButton("Delecte");
+		btnDel.setFont(new Font("굴림", Font.PLAIN, 20));
+		btnDel.setBounds(426, 11, 102, 35);
+		getContentPane().add(btnDel);
+		
+		table = new JTable();
+		table.setBounds(46, 208, 268, -119);
+		getContentPane().add(table);
+	}
+
+	@Override
+	public void arrange() {
+		
+	}
+}
