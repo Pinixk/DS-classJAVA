@@ -6,7 +6,7 @@ import java.io.DataOutputStream;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class _03_TcpIpMultiChatClient {
+public class _03_TcpIpChat_Terminal {
   public static void main(String[] args) {
     String serverIp = JOptionPane.showInputDialog("Input Server IP", "192.168.0.127");
     String nickname = JOptionPane.showInputDialog("Input Your Nicname");
