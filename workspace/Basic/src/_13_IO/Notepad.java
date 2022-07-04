@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 import _12_Swing.BaseFrm;
 
-public class Notepad extends BaseFrm{
+public class Notepad extends BaseFrm implements ActionListener {
   public static void main(String[] args) {
     new Notepad();
   }
@@ -27,7 +27,7 @@ public class Notepad extends BaseFrm{
     miOpen = new JMenuItem("Open(O)");
     miSave = new JMenuItem("Save(S)");
     miExit = new JMenuItem("Exit(E)");
-    
+
     menuBar.add(mnFile);
     menuBar.add(mnInfo);
     mnFile.setMnemonic(KeyEvent.VK_F);
@@ -41,11 +41,28 @@ public class Notepad extends BaseFrm{
     miOpen.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, ActionEvent.CTRL_MASK));
     miSave.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK));
     miExit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_E, ActionEvent.CTRL_MASK));
+    miNew.addActionListener(this);
+    miOpen.addActionListener(this);
+    miSave.addActionListener(this);
+    miExit.addActionListener(this);
 
     setJMenuBar(menuBar);
-    
+
     ta = new JTextArea();
     scp = new JScrollPane(ta);
+  }
+
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    if (e.getSource() == miNew) {
+      ta.setText("");
+    } else if (e.getSource() == miOpen) {
+
+    } else if (e.getSource() == miSave) {
+
+    } else if (e.getSource() == miExit) {
+
+    }
   }
 
   @Override
