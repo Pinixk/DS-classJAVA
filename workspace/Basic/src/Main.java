@@ -42,10 +42,12 @@ public class Main extends Base {
 
   @Override
   public void init() {
+    
     ta = new JTextArea();
     ta.setEditable(false);
     ta.setFont(new Font("맑은 고딕", Font.PLAIN, 13));
     scp = new JScrollPane(ta);
+
     tf = new JTextField();
     tf.setFont(new Font("맑은 고딕", Font.PLAIN, 13));
     tf.addActionListener(e -> {
@@ -57,6 +59,7 @@ public class Main extends Base {
         e1.printStackTrace();
       }
     });
+
   }
 
   @Override
