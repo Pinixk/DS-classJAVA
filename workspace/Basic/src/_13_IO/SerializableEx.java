@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class SerializableEx {
   public static void main(String[] args) {
-    
+
     User u1 = new User("KBJ", 1);
     User u2 = new User("AAA", 0);
 
@@ -13,7 +13,7 @@ public class SerializableEx {
     list.add(u1);
     list.add(u2);
 
-    String exportFile = "UserInfo.ser";
+    String exportFile = "UserInfo.text";
     // Serializable Object Encoding
     try { 
       FileOutputStream fos = new FileOutputStream(exportFile);
@@ -34,7 +34,6 @@ public class SerializableEx {
       FileInputStream fis = new FileInputStream(exportFile);
       BufferedInputStream bis = new BufferedInputStream(fis);
       ObjectInputStream in = new ObjectInputStream(bis);
-
       
       User get1 = (User) in.readObject();
       User get2 = (User) in.readObject();
