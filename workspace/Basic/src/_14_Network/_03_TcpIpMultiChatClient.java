@@ -6,7 +6,7 @@ import java.io.DataOutputStream;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class _02_TcpIpMultiChatClient {
+public class _03_TcpIpMultiChatClient {
   public static void main(String[] args) {
     String serverIp = JOptionPane.showInputDialog("Input Server IP", "192.168.0.127");
     String nickname = JOptionPane.showInputDialog("Input Your Nicname");
@@ -15,16 +15,20 @@ public class _02_TcpIpMultiChatClient {
     
     try {
       Socket socket = new Socket(serverIp, 7777);
+
+      // 정보 듣기
       Receirver receirver = new Receirver(socket);
       receirver.start();
       
+      // 
       dos = new DataOutputStream(socket.getOutputStream());
       dos.writeUTF(nickname);
       while(dos != null){
         dos.writeUTF("["+nickname+"]"+s.nextLine());
       }
-    } catch (Exception e) {}
-
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 }
 

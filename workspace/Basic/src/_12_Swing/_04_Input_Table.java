@@ -14,7 +14,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JButton;
 import javax.swing.JTable;
 
-public class _04_Input_Table extends BaseFrm2 {
+public class _04_Input_Table extends BaseFrm {
   // public InputTable() {
   // }
   public _04_Input_Table() {
@@ -57,6 +57,7 @@ public class _04_Input_Table extends BaseFrm2 {
     btnAdd = new JButton("Add");
     btnAdd.setFont(new Font("Nirmala UI", Font.BOLD, 18));
     btnAdd.setBounds(402, 19, 70, 37);
+    
     btnAdd.addActionListener(e -> {
       if (tfId.getText().equals("") || (new String(pfPass.getPassword())).equals("")) {
         JOptionPane.showMessageDialog(btnAdd, "Check ID and Pass");
