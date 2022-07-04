@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class SerializableEx {
   public static void main(String[] args) {
+    
     User u1 = new User("KBJ", 1);
     User u2 = new User("AAA", 0);
 
