@@ -17,8 +17,8 @@ public class _05_SeializableEx {
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
 			ObjectOutputStream out = new ObjectOutputStream(bos);
 
-			User u1 = new User("lgh", 10);
-			User u2 = new User("kia", 10);
+			User u1 = new User("KBJ", 10);
+			User u2 = new User("KIA", 10);
 
 			ArrayList<User> list = new ArrayList<>();
 			list.add(u1);
