@@ -3,14 +3,14 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import _12_Swing.BaseFrm;
 
-public class Main extends BaseFrm {
+public class Main extends Base {
   public static void main(String[] args) {
     new Main();
   }
@@ -50,6 +50,7 @@ public class Main extends BaseFrm {
     tf.setFont(new Font("맑은 고딕", Font.PLAIN, 13));
     tf.addActionListener(e -> {
       try {
+        if(tf.getText()==""){return ;}
         out.writeUTF("["+nickName+"]"+tf.getText());
         tf.setText("");
       } catch (Exception e1) {
@@ -89,5 +90,42 @@ public class Main extends BaseFrm {
         }
       }
     }
+  }
+}
+
+abstract class Base extends JFrame { // abstract 인스턴스 상속 불가
+  private int width, height;
+
+  public Base() {
+    this(600, 400);
+  }
+
+  public Base(int width, int height) {
+    this.width = width;
+    this.height = height;
+    init();
+    arrange();
+    inflate();
+  }
+
+  public Base(String title) {
+    this();
+    setTitle(title);
+  }
+
+  public Base(String title, int width, int height) {
+    this(width, height);
+    setTitle(title);
+  }
+
+  public abstract void init();
+
+  public abstract void arrange();
+
+  public void inflate() {
+    setSize(width, height);   // 창 크기 설정
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // x 누르면 프로그램도 종료
+    setLocationRelativeTo(this); // 창 정가운데 정렬
+    setVisible(true); // 가시성
   }
 }
