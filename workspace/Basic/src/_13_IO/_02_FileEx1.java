@@ -11,15 +11,18 @@ public class _02_FileEx1 {
 		int ret = fc.showOpenDialog(null);
 		if (ret == 0) {
 			File f = fc.getSelectedFile();
-			System.out.println("FileName: "+f.getName());
-			System.out.println("Extend of File: "+
-						f.getName().substring(f.getName().lastIndexOf(".")+1));
-			System.out.println("path: "+f.getPath());
-			System.out.println("Absolute path: "+f.getAbsolutePath());
-			System.out.println("Canonical path: "+f.getCanonicalPath());
-			System.out.println("Directory Name: "+f.getParent());
-			System.out.println("pathSeparator: "+File.pathSeparator);
-			System.out.println("separatorChar: "+File.separatorChar);
+			// 3개를 자주 씀
+			System.out.println("FileName: " + f.getName());
+			System.out.println("path: " + f.getPath());
+			System.out.println("Directory Name: " + f.getParent());
+
+			System.out.println();
+			System.out.println("Extend of File: " +
+					f.getName().substring(f.getName().lastIndexOf(".") + 1));
+			System.out.println("Absolute path: " + f.getAbsolutePath());
+			System.out.println("Canonical path: " + f.getCanonicalPath());
+			System.out.println("pathSeparator: " + File.pathSeparator);
+			System.out.println("separatorChar: " + File.separatorChar);
 		}
 	}
 }
