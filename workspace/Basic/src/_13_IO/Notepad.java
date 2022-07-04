@@ -16,7 +16,7 @@ public class Notepad extends BaseFrm implements ActionListener {
   // 초기화
   private JMenuBar menuBar;
   private JMenu mnFile, mnInfo;
-  private JMenuItem miOpen, miNew, miSave, miExit;
+  private JMenuItem miOpen, miNew, miSave, miExit, miInfo;
   private JTextArea ta;
   private JScrollPane scp;
   private JFileChooser fc;
@@ -31,6 +31,7 @@ public class Notepad extends BaseFrm implements ActionListener {
     miOpen = new JMenuItem("열기(O)");
     miSave = new JMenuItem("저장(S)");
     miExit = new JMenuItem("종료(E)");
+    miInfo = new JMenuItem("정보(I)");
 
     menuBar.add(mnFile);
     menuBar.add(mnInfo);
@@ -41,6 +42,7 @@ public class Notepad extends BaseFrm implements ActionListener {
     mnFile.add(miOpen);
     mnFile.add(miSave);
     mnFile.add(miExit);
+    mnInfo.add(miInfo);
 
     // 단축키 설정
     miNew.setMnemonic(KeyEvent.VK_N); // 중복
@@ -54,6 +56,7 @@ public class Notepad extends BaseFrm implements ActionListener {
     miOpen.addActionListener(this);
     miSave.addActionListener(this);
     miExit.addActionListener(this);
+    miInfo.addActionListener(this);
 
     setJMenuBar(menuBar);
 
@@ -75,6 +78,9 @@ public class Notepad extends BaseFrm implements ActionListener {
       fileSave();
     } else if (e.getSource() == miExit) {
 
+    } else if (e.getSource() == miInfo) {
+      dispose();  // 기존창은 닫히고 새로운 창만 열림, 로그인에 활용?
+      new MyDialog(this, false);
     }
   }
 
@@ -99,7 +105,7 @@ public class Notepad extends BaseFrm implements ActionListener {
   private void fileSave() {
     try {
       int ret = fc.showSaveDialog(miSave);
-      if (ret == 0) { // 파일을 열었따
+      if (ret == 0) { // 파일을 열었다
         String saveFile = fc.getSelectedFile().toString();
         FileWriter fw = new FileWriter(saveFile);
         BufferedWriter bw = new BufferedWriter(fw);
