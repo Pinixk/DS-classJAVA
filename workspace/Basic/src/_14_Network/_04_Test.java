@@ -1,6 +1,7 @@
 package _14_Network;
 
-import java.io.DataInputStream;
+import java.awt.Font;
+import java.io.*;
 import java.net.Socket;
 import javax.swing.*;
 import _12_Swing.BaseFrm;
@@ -9,24 +10,28 @@ public class _04_Test extends BaseFrm {
 
   private JTextArea ta;
   private JScrollPane scp;
-  private JTextField chat;
+  private JTextField tf;
   private Socket socket;
   private String nickName;
+  private DataOutputStream out;
 
   public _04_Test() {
-    super("MultiChat", 400, 500);
+    super("Multitf", 400, 500);
     String serverIp = JOptionPane.showInputDialog("Input Server IP", "192.168.0.127");
     nickName = JOptionPane.showInputDialog("Input Your Nicname");
 
     try {
       socket = new Socket(serverIp, 7777);
+      out = new DataOutputStream(socket.getOutputStream());
+      out.writeUTF(nickName);
+
     } catch (Exception e) {
       e.printStackTrace();
     }
 
     Receirver r = new Receirver(socket);
     r.start();
-    chat.requestFocus();
+    tf.requestFocus();
 
   }
 
@@ -39,14 +44,24 @@ public class _04_Test extends BaseFrm {
     ta = new JTextArea();
     ta.setEditable(false);
     scp = new JScrollPane(ta);
-    chat = new JTextField();
+    tf = new JTextField();
+    tf.setFont(new Font("맑은 고딕", Font.PLAIN, 20));
+    ta.setFont(new Font("맑은 고딕", Font.PLAIN, 20));
+    tf.addActionListener(e -> {
+      try {
+        out.writeUTF("[" + nickName + "]"+tf.getText());
+        tf.setText("");
+      } catch (Exception e1) {
+        e1.printStackTrace();
+      }
+    });
   }
 
   @Override
   public void arrange() {
     setTitle("My Memo");
     add(scp);
-    add(chat, "South");
+    add(tf, "South");
   }
 
   private class Receirver extends Thread {
@@ -66,7 +81,7 @@ public class _04_Test extends BaseFrm {
     public void run() {
       while (in != null) {
         try {
-          ta.append(in.readUTF());
+          ta.append(in.readUTF() + "\n");
         } catch (Exception e) {
           e.printStackTrace();
         }
