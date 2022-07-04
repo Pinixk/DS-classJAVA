@@ -45,8 +45,8 @@ public class _04_Test extends BaseFrm {
     ta.setEditable(false);
     scp = new JScrollPane(ta);
     tf = new JTextField();
-    tf.setFont(new Font("맑은 고딕", Font.PLAIN, 20));
-    ta.setFont(new Font("맑은 고딕", Font.PLAIN, 20));
+    tf.setFont(new Font("맑은 고딕", Font.PLAIN, 12));
+    ta.setFont(new Font("맑은 고딕", Font.PLAIN, 12));
     tf.addActionListener(e -> {
       try {
         out.writeUTF("[" + nickName + "]"+tf.getText());
@@ -82,6 +82,7 @@ public class _04_Test extends BaseFrm {
       while (in != null) {
         try {
           ta.append(in.readUTF() + "\n");
+          ta.setCaretPosition(ta.getDocument().getLength());
         } catch (Exception e) {
           e.printStackTrace();
         }
