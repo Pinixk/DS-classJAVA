@@ -35,20 +35,20 @@ public class FrmLogin extends BaseFrm {
 		getContentPane().setLayout(null);
 		
 		textField = new JTextField();
-		textField.setBounds(128, 89, 206, 34);
+		textField.setBounds(128, 89, 209, 34);
 		textField.setColumns(10);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(128, 133, 206, 34);
+		passwordField.setBounds(128, 133, 209, 34);
 		
-		btnLogin = new JButton("\uB85C\uADF8\uC778");
+		btnLogin = new JButton("로그인");
 		btnLogin.setBounds(30, 219, 89, 23);
 		btnLogin.addActionListener(e->{
 			String id = textField.getText();
 			String pass = new String(passwordField.getPassword());
 			UserVo user = new DaoLogin().loginCheck(id, pass);
 			if(user==null) { 
-				JOptionPane.showMessageDialog(btnLogin, "�α��ο� �����߽��ϴ�");
+				JOptionPane.showMessageDialog(btnLogin, "아이디를 입력하세요");
 				textField.setText("");
 				passwordField.setText("");
 				return;
@@ -57,18 +57,16 @@ public class FrmLogin extends BaseFrm {
 			new FrmList();
 		});
 		
-		btnJoin = new JButton("\uD68C\uC6D0\uAC00\uC785");
+		btnJoin = new JButton("회원가입");
 		btnJoin.setBounds(248, 219, 89, 23);
 		btnJoin.addActionListener(e->{
-			// ��ȿ�� �˻�
 			dispose();
 			new FrmJoin();
 		});
 		
-		btnCancel = new JButton("\uCDE8\uC18C");
-		btnCancel.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
+		btnCancel = new JButton("취소");
+		btnCancel.addActionListener(e->{
+			dispose();
 		});
 		btnCancel.setBounds(139, 219, 89, 23);
 		
@@ -90,6 +88,7 @@ public class FrmLogin extends BaseFrm {
 		getContentPane().add(btnCancel);
 		getContentPane().add(loginId);
 		getContentPane().add(loginPass);
+		
 		
 	}
 }

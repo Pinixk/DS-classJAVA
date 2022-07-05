@@ -31,20 +31,20 @@ public class FrmJoin extends BaseFrm{
 		joinId = new JLabel("ID");
 		joinId.setBounds(67, 32, 63, 24);
 		
-		joinName = new JLabel("\uC774\uB984");
+		joinName = new JLabel("이름");
 		joinName.setBounds(67, 66, 63, 24);
 		
-		joinPass = new JLabel("\uBE44\uBC88");
+		joinPass = new JLabel("비번");
 		joinPass.setBounds(67, 100, 63, 24);
+		
+		joinRepass = new JLabel("비번 확인");
+		joinRepass.setBounds(67, 134, 63, 24);
 		
 		pfPass = new JPasswordField();
 		pfPass.setBounds(142, 102, 170, 21);
 		
 		pfRePass = new JPasswordField();
 		pfRePass.setBounds(142, 136, 170, 21);
-		
-		joinRepass = new JLabel("\uBE44\uBC88 \uD655\uC778");
-		joinRepass.setBounds(67, 134, 63, 24);
 		
 		tfId = new JTextField();
 		tfId.setBounds(142, 34, 170, 21);
@@ -54,7 +54,7 @@ public class FrmJoin extends BaseFrm{
 		tfName.setBounds(142, 68, 170, 21);
 		tfName.setColumns(10);
 		
-		btnJoinRegist = new JButton("\uAC00\uC785");
+		btnJoinRegist = new JButton("가입");
 		btnJoinRegist.setBounds(67, 186, 113, 23);
 		btnJoinRegist.addActionListener(e->{
 			String id = tfId.getText();
@@ -62,20 +62,24 @@ public class FrmJoin extends BaseFrm{
 			String pass = new String(pfPass.getPassword());
 			String RePass = new String(pfRePass.getPassword());
 			
-			if(id.length()==0 || id.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"���̵� �Է��ϼ���"); tfId.requestFocus(); return;}
-			if(name.length()==0 || name.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"�̸��� �Է��ϼ���"); tfName.requestFocus(); return;}
-			if(pass.length()==0 || pass.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"��й�ȣ�� �Է��ϼ���"); pfPass.requestFocus(); return;}
-			if(!pass.equals(RePass)) {JOptionPane.showMessageDialog(btnJoinRegist,"��й�ȣ�� Ȯ���ϼ���"); pfRePass.requestFocus(); return;}
+			if(id.length()==0 || id.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"아이디를 입렵하세요"); tfId.requestFocus(); return;}
+			if(name.length()==0 || name.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"이름를 입렵하세요"); tfName.requestFocus(); return;}
+			if(pass.length()==0 || pass.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"비밀번호를 입렵하세요"); pfPass.requestFocus(); return;}
+			if(!pass.equals(RePass)) {JOptionPane.showMessageDialog(btnJoinRegist,"비밀번호를 일치 시키세요"); pfRePass.requestFocus(); return;}
 			
 			int ret = new DaoJoin().addUser(new UserVo(id, name, pass));
-			if(ret>0) JOptionPane.showMessageDialog(btnJoinRegist, "���ԵǾ����ϴ�.");
-			else JOptionPane.showMessageDialog(btnJoinRegist, "���Կ� �����Ͽ����ϴ�.");
+			if(ret>0) JOptionPane.showMessageDialog(btnJoinRegist, "가입 되었습니다.");
+			else JOptionPane.showMessageDialog(btnJoinRegist, "가입에 실패하였습니다.");
 			dispose();
 			new FrmLogin();
 		});
 		
-		btnCancel2 = new JButton("\uCDE8\uC18C");
+		btnCancel2 = new JButton("취소");
 		btnCancel2.setBounds(192, 185, 120, 24);
+		btnCancel2.addActionListener(e->{
+			dispose();
+			new FrmLogin();
+		});
 		
 	}
 	
