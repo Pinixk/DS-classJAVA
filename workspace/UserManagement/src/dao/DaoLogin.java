@@ -4,7 +4,6 @@ import java.sql.SQLException;
 
 import vo.UserVo;
 
-
 public class DaoLogin extends DaoSet {
 	public UserVo loginCheck(String id, String pass) {
 		UserVo result = null;
@@ -14,7 +13,7 @@ public class DaoLogin extends DaoSet {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.setString(2, pass);
-			rs = pstmt.executeQuery(); // select´Â executeQuery
+			rs = pstmt.executeQuery(); // selectï¿½ï¿½ executeQuery
 			if(rs.next()) {
 				result = new UserVo(
 						rs.getString("id"), 

@@ -23,9 +23,9 @@ public class FrmList extends BaseFrm {
 	
 	@Override
 	public void init() {
-		lbTitle = new JLabel("È¸¿ø ¸ñ·Ï");
+		lbTitle = new JLabel("È¸ï¿½ï¿½ ï¿½ï¿½ï¿½");
 		lbTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		lbTitle.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		lbTitle.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		table = new JTable();
 		scp = new JScrollPane(table);
 		
