@@ -62,14 +62,14 @@ public class FrmJoin extends BaseFrm{
 			String pass = new String(pfPass.getPassword());
 			String RePass = new String(pfRePass.getPassword());
 			
-			if(id.length()==0 || id.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"���̵� �Է��ϼ���"); tfId.requestFocus(); return;}
-			if(name.length()==0 || name.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"�̸��� �Է��ϼ���"); tfName.requestFocus(); return;}
-			if(pass.length()==0 || pass.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"��й�ȣ�� �Է��ϼ���"); pfPass.requestFocus(); return;}
-			if(!pass.equals(RePass)) {JOptionPane.showMessageDialog(btnJoinRegist,"��й�ȣ�� Ȯ���ϼ���"); pfRePass.requestFocus(); return;}
+			if(id.length()==0 || id.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"아이디를 입력하세요"); tfId.requestFocus(); return;}
+			if(name.length()==0 || name.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"이름을 입력하세요"); tfName.requestFocus(); return;}
+			if(pass.length()==0 || pass.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"비밀번호를 입력하세요"); pfPass.requestFocus(); return;}
+			if(!pass.equals(RePass)) {JOptionPane.showMessageDialog(btnJoinRegist,"비밀번호를 맞게 입력하세요"); pfRePass.requestFocus(); return;}
 			
 			int ret = new DaoJoin().addUser(new UserVo(id, name, pass));
-			if(ret>0) JOptionPane.showMessageDialog(btnJoinRegist, "���ԵǾ����ϴ�.");
-			else JOptionPane.showMessageDialog(btnJoinRegist, "���Կ� �����Ͽ����ϴ�.");
+			if(ret>0) JOptionPane.showMessageDialog(btnJoinRegist, "가입되었습니다.");
+			else JOptionPane.showMessageDialog(btnJoinRegist, "가입에 실패하였습니다.");
 			dispose();
 			new FrmLogin();
 		});
