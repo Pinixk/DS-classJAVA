@@ -10,9 +10,9 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 
-public class Main extends Base {
+public class Test extends Base {
   public static void main(String[] args) {
-    new Main();
+    new Test();
   }
 
   private JTextArea ta;
@@ -22,7 +22,7 @@ public class Main extends Base {
   private DataOutputStream out;
   private String nickName;
 
-  public Main(){
+  public Test(){
     super("Chat room", 400, 500);
     String serverIp = JOptionPane.showInputDialog("Input Server Ip", "192.168.0.32");
     nickName = JOptionPane.showInputDialog("Input Your Nickname");
