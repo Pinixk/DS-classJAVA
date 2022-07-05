@@ -21,7 +21,7 @@ public class _04_TcpIpChat_Swing extends BaseFrm {
 
   public _04_TcpIpChat_Swing() {
     super("Multitf", 400, 500);
-    String serverIp = JOptionPane.showInputDialog("Input Server IP", "192.168.0.127");
+    String serverIp = JOptionPane.showInputDialog("Input Server IP", "192.168.0.32");
     nickName = JOptionPane.showInputDialog("Input Your Nicname");
 
     try {

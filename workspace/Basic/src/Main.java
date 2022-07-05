@@ -24,7 +24,7 @@ public class Main extends Base {
 
   public Main(){
     super("Chat room", 400, 500);
-    String serverIp = JOptionPane.showInputDialog("Input Server Ip", "192.168.0.127");
+    String serverIp = JOptionPane.showInputDialog("Input Server Ip", "192.168.0.32");
     nickName = JOptionPane.showInputDialog("Input Your Nickname");
 
     try {
@@ -42,7 +42,7 @@ public class Main extends Base {
 
   @Override
   public void init() {
-    
+
     ta = new JTextArea();
     ta.setEditable(false);
     ta.setFont(new Font("맑은 고딕", Font.PLAIN, 13));
@@ -52,7 +52,8 @@ public class Main extends Base {
     tf.setFont(new Font("맑은 고딕", Font.PLAIN, 13));
     tf.addActionListener(e -> {
       try {
-        if(tf.getText()==""){return ;}
+        String tmp = tf.getText();
+        if(tmp.length()!=0 && tmp.trim().length()!=0)
         out.writeUTF("["+nickName+"]"+tf.getText());
         tf.setText("");
       } catch (Exception e1) {
