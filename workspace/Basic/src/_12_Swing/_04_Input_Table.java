@@ -93,7 +93,7 @@ public class _04_Input_Table extends BaseFrm {
   }
 
   @Override
-  public void arange() {
+  public void arrange() {
     getContentPane().add(lbId);
     getContentPane().add(tfId);
     getContentPane().add(lbPass);

@@ -9,10 +9,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-
-public class Main extends Base {
+public class Test extends Base {
   public static void main(String[] args) {
-    new Main();
+    new Test();
   }
 
   private JTextArea ta;
@@ -22,9 +21,9 @@ public class Main extends Base {
   private DataOutputStream out;
   private String nickName;
 
-  public Main(){
+  public Test() {
     super("Chat room", 400, 500);
-    String serverIp = JOptionPane.showInputDialog("Input Server Ip", "192.168.0.127");
+    String serverIp = JOptionPane.showInputDialog("Input Server Ip", "192.168.0.32");
     nickName = JOptionPane.showInputDialog("Input Your Nickname");
 
     try {
@@ -42,21 +41,25 @@ public class Main extends Base {
 
   @Override
   public void init() {
+
     ta = new JTextArea();
     ta.setEditable(false);
     ta.setFont(new Font("맑은 고딕", Font.PLAIN, 13));
     scp = new JScrollPane(ta);
+
     tf = new JTextField();
     tf.setFont(new Font("맑은 고딕", Font.PLAIN, 13));
     tf.addActionListener(e -> {
       try {
-        if(tf.getText()==""){return ;}
-        out.writeUTF("["+nickName+"]"+tf.getText());
+        String tmp = tf.getText();
+        if (tmp.length() != 0 && tmp.trim().length() != 0)
+          out.writeUTF("[" + nickName + "]" + tf.getText());
         tf.setText("");
       } catch (Exception e1) {
         e1.printStackTrace();
       }
     });
+
   }
 
   @Override
@@ -69,7 +72,7 @@ public class Main extends Base {
   private class Receiver extends Thread {
     Socket socket;
     DataInputStream in;
-  
+
     public Receiver(Socket socket) {
       try {
         this.socket = socket;
@@ -78,7 +81,7 @@ public class Main extends Base {
         e.printStackTrace();
       }
     }
-  
+
     @Override
     public void run() {
       while (in != null) {
@@ -123,7 +126,7 @@ abstract class Base extends JFrame { // abstract 인스턴스 상속 불가
   public abstract void arrange();
 
   public void inflate() {
-    setSize(width, height);   // 창 크기 설정
+    setSize(width, height); // 창 크기 설정
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // x 누르면 프로그램도 종료
     setLocationRelativeTo(this); // 창 정가운데 정렬
     setVisible(true); // 가시성

@@ -6,10 +6,10 @@ import java.net.Socket;
 import javax.swing.*;
 import _12_Swing.BaseFrm;
 
-public class _04_Test extends BaseFrm {
+public class _04_TcpIpChat_Swing extends BaseFrm {
 
   public static void main(String[] args) {
-    new _04_Test();
+    new _04_TcpIpChat_Swing();
   }
   
   private JTextArea ta;
@@ -19,9 +19,9 @@ public class _04_Test extends BaseFrm {
   private String nickName;
   private DataOutputStream out;
 
-  public _04_Test() {
+  public _04_TcpIpChat_Swing() {
     super("Multitf", 400, 500);
-    String serverIp = JOptionPane.showInputDialog("Input Server IP", "192.168.0.127");
+    String serverIp = JOptionPane.showInputDialog("Input Server IP", "192.168.0.32");
     nickName = JOptionPane.showInputDialog("Input Your Nicname");
 
     try {
