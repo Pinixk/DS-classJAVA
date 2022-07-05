@@ -6,8 +6,6 @@ import javax.swing.JTextField;
 import vo.UserVo;
 import dao.DaoJoin;
 
-import java.awt.event.FocusListener;
-
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
 
@@ -64,14 +62,14 @@ public class FrmJoin extends BaseFrm{
 			String pass = new String(pfPass.getPassword());
 			String RePass = new String(pfRePass.getPassword());
 			
-			if(id.length()==0 || id.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"¾ÆÀÌµð¸¦ ÀÔ·ÂÇÏ¼¼¿ä"); tfId.requestFocus(); return;}
-			if(name.length()==0 || name.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"ÀÌ¸§¸¦ ÀÔ·ÂÇÏ¼¼¿ä"); tfName.requestFocus(); return;}
-			if(pass.length()==0 || pass.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"ºñ¹Ð¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä"); pfPass.requestFocus(); return;}
-			if(!pass.equals(RePass)) {JOptionPane.showMessageDialog(btnJoinRegist,"ºñ¹Ð¹øÈ£¸¦ È®ÀÎÇÏ¼¼¿ä"); pfRePass.requestFocus(); return;}
+			if(id.length()==0 || id.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½"); tfId.requestFocus(); return;}
+			if(name.length()==0 || name.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½"); tfName.requestFocus(); return;}
+			if(pass.length()==0 || pass.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½"); pfPass.requestFocus(); return;}
+			if(!pass.equals(RePass)) {JOptionPane.showMessageDialog(btnJoinRegist,"ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½"); pfRePass.requestFocus(); return;}
 			
 			int ret = new DaoJoin().addUser(new UserVo(id, name, pass));
-			if(ret>0) JOptionPane.showMessageDialog(btnJoinRegist, "°¡ÀÔµÇ¾ú½À´Ï´Ù.");
-			else JOptionPane.showMessageDialog(btnJoinRegist, "°¡ÀÔ¿¡ ½ÇÆÐÇÏ¿´½À´Ï´Ù.");
+			if(ret>0) JOptionPane.showMessageDialog(btnJoinRegist, "ï¿½ï¿½ï¿½ÔµÇ¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+			else JOptionPane.showMessageDialog(btnJoinRegist, "ï¿½ï¿½ï¿½Ô¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 			dispose();
 			new FrmLogin();
 		});

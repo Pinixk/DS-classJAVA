@@ -1,7 +1,5 @@
 package UI;
-import javax.swing.JTextArea;
 import javax.swing.JButton;
-import java.awt.BorderLayout;
 import javax.swing.JTextField;
 
 import dao.DaoLogin;
@@ -50,7 +48,7 @@ public class FrmLogin extends BaseFrm {
 			String pass = new String(passwordField.getPassword());
 			UserVo user = new DaoLogin().loginCheck(id, pass);
 			if(user==null) { 
-				JOptionPane.showMessageDialog(btnLogin, "·Î±×ÀÎ¿¡ ½ÇÆÐÇß½À´Ï´Ù");
+				JOptionPane.showMessageDialog(btnLogin, "ï¿½Î±ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½");
 				textField.setText("");
 				passwordField.setText("");
 				return;
@@ -62,7 +60,7 @@ public class FrmLogin extends BaseFrm {
 		btnJoin = new JButton("\uD68C\uC6D0\uAC00\uC785");
 		btnJoin.setBounds(248, 219, 89, 23);
 		btnJoin.addActionListener(e->{
-			// À¯È¿¼º °Ë»ç
+			// ï¿½ï¿½È¿ï¿½ï¿½ ï¿½Ë»ï¿½
 			dispose();
 			new FrmJoin();
 		});
