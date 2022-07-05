@@ -7,3 +7,11 @@ public class StartMain {
 	}
 
 }
+
+// CREATE TABLE users(
+// 	id VARCHAR(20) PRIMARY KEY,
+// 	NAME VARCHAR(20),
+// 	pass VARCHAR(20)
+// );
+
+// DROP TABLE users;
