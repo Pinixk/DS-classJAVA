@@ -23,7 +23,7 @@ public class Test extends Base {
 
   public Test() {
     super("Chat room", 400, 500);
-    String serverIp = JOptionPane.showInputDialog("Input Server Ip", "192.168.0.32");
+    String serverIp = JOptionPane.showInputDialog("Input Server Ip", "192.168.0.10");
     nickName = JOptionPane.showInputDialog("Input Your Nickname");
 
     try {
