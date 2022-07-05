@@ -30,5 +30,10 @@ public class UserVo {
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
+
+	@Override
+	public String toString() {
+		return id+"/"+name;
+	}
 	
 }

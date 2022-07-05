@@ -13,7 +13,7 @@ public class DaoJoin extends DaoSet {
 			pstmt.setString(1, user.getId());
 			pstmt.setString(2, user.getName());
 			pstmt.setString(3, user.getPass());
-			result = pstmt.executeUpdate();
+			result = pstmt.executeUpdate();	// insert ¿œ ∂ß 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

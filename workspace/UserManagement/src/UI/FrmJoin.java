@@ -6,6 +6,8 @@ import javax.swing.JTextField;
 import vo.UserVo;
 import dao.DaoJoin;
 
+import java.awt.event.FocusListener;
+
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
 
@@ -60,7 +62,13 @@ public class FrmJoin extends BaseFrm{
 			String id = tfId.getText();
 			String name = tfName.getText();
 			String pass = new String(pfPass.getPassword());
-			// messageDialog로 띄우면서 유효성 검사
+			String RePass = new String(pfRePass.getPassword());
+			
+			if(id.length()==0 || id.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"아이디를 입력하세요"); tfId.requestFocus(); return;}
+			if(name.length()==0 || name.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"이름를 입력하세요"); tfName.requestFocus(); return;}
+			if(pass.length()==0 || pass.trim().length()==0) {JOptionPane.showMessageDialog(btnJoinRegist,"비밀번호를 입력하세요"); pfPass.requestFocus(); return;}
+			if(!pass.equals(RePass)) {JOptionPane.showMessageDialog(btnJoinRegist,"비밀번호를 확인하세요"); pfRePass.requestFocus(); return;}
+			
 			int ret = new DaoJoin().addUser(new UserVo(id, name, pass));
 			if(ret>0) JOptionPane.showMessageDialog(btnJoinRegist, "가입되었습니다.");
 			else JOptionPane.showMessageDialog(btnJoinRegist, "가입에 실패하였습니다.");

@@ -3,8 +3,14 @@ import javax.swing.JTextArea;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
 import javax.swing.JTextField;
+
+import dao.DaoLogin;
+import vo.UserVo;
+
 import javax.swing.JPasswordField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -38,11 +44,20 @@ public class FrmLogin extends BaseFrm {
 		passwordField.setBounds(128, 133, 206, 34);
 		
 		btnLogin = new JButton("\uB85C\uADF8\uC778");
-		btnLogin.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		btnLogin.setBounds(30, 219, 89, 23);
+		btnLogin.addActionListener(e->{
+			String id = textField.getText();
+			String pass = new String(passwordField.getPassword());
+			UserVo user = new DaoLogin().loginCheck(id, pass);
+			if(user==null) { 
+				JOptionPane.showMessageDialog(btnLogin, "로그인에 실패했습니다");
+				textField.setText("");
+				passwordField.setText("");
+				return;
+			}
+			dispose();
+			new FrmList();
+		});
 		
 		btnJoin = new JButton("\uD68C\uC6D0\uAC00\uC785");
 		btnJoin.setBounds(248, 219, 89, 23);
