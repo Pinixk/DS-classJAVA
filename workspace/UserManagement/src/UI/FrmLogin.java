@@ -28,7 +28,6 @@ public class FrmLogin extends BaseFrm {
 		super("Login", 400, 400);
 	}
 	
-	
 	@Override
 	public void init() {
 		
@@ -47,8 +46,11 @@ public class FrmLogin extends BaseFrm {
 			String id = textField.getText();
 			String pass = new String(passwordField.getPassword());
 			UserVo user = new DaoLogin().loginCheck(id, pass);
+			
+			if(id.length()==0 || id.trim().length()==0) {JOptionPane.showMessageDialog(btnJoin,"아이디를 입렵하세요"); textField.requestFocus(); return;}
+			if(pass.length()==0 || pass.trim().length()==0) {JOptionPane.showMessageDialog(btnJoin,"비밀번호를 입렵하세요"); passwordField.requestFocus(); return;}
 			if(user==null) { 
-				JOptionPane.showMessageDialog(btnLogin, "아이디를 입력하세요");
+				JOptionPane.showMessageDialog(btnLogin, "등록되지 않은 아이디입니다.");
 				textField.setText("");
 				passwordField.setText("");
 				return;
@@ -57,7 +59,7 @@ public class FrmLogin extends BaseFrm {
 			new FrmList();
 		});
 		
-		btnJoin = new JButton("회원가입");
+		btnJoin = new JButton("가입");
 		btnJoin.setBounds(248, 219, 89, 23);
 		btnJoin.addActionListener(e->{
 			dispose();
@@ -70,10 +72,10 @@ public class FrmLogin extends BaseFrm {
 		});
 		btnCancel.setBounds(139, 219, 89, 23);
 		
-		loginPass = new JLabel("\uBE44\uBC00\uBC88\uD638");
+		loginPass = new JLabel("비밀번호");
 		loginPass.setBounds(30, 132, 97, 34);
 		
-		loginId = new JLabel("\uC544\uC774\uB514");
+		loginId = new JLabel("아이디");
 		loginId.setBounds(30, 88, 97, 34);
 		
 	}
