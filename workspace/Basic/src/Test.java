@@ -9,7 +9,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-public class Test extends Base {
+import _12_Swing.BaseFrm;
+
+public class Test extends BaseFrm {
   public static void main(String[] args) {
     new Test();
   }
