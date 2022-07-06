@@ -43,15 +43,17 @@ public class FrmLogin extends BaseFrm {
 		btnLogin.addActionListener(e->{
 			String id = textField.getText();
 			String pass = new String(passwordField.getPassword());
-			UserVo user = new DaoLogin().loginCheck(id, pass);
 			if(id.length()==0 || id.trim().length()==0) {JOptionPane.showMessageDialog(btnLogin,"아이디를 입력하세요"); textField.requestFocus(); return;}
 			if(pass.length()==0 || pass.trim().length()==0) {JOptionPane.showMessageDialog(btnLogin,"비밀번호를 입력하세요"); passwordField.requestFocus(); return;}
+			
+			UserVo user = new DaoLogin().loginCheck(id, pass);
 			if(user == null) {
 				JOptionPane.showMessageDialog(btnLogin, "등록된 아이디나 비밀번호가 아닙니다.");
 				textField.setText("");
 				passwordField.setText("");
 				return;
 			}
+			
 			dispose();
 			new FrmList();
 		});

@@ -68,6 +68,7 @@ public class FrmJoin extends BaseFrm {
 			int ret = new DaoJoin().addUser(new UserVo(id, name, pass));
 			if(ret>0) JOptionPane.showMessageDialog(btnJoinRegist, "가입되었습니다.");
 			else JOptionPane.showMessageDialog(btnJoinRegist, "가입에 실패하였습니다.");
+			
 			dispose();
 			new FrmLogin();
 		});

@@ -21,8 +21,8 @@ public class _04_TcpIpChat_Swing extends BaseFrm {
 
   public _04_TcpIpChat_Swing() {
     super("Multitf", 400, 500);
-    String serverIp = JOptionPane.showInputDialog("Input Server IP", "192.168.0.32");
-    nickName = JOptionPane.showInputDialog("Input Your Nicname");
+    String serverIp = JOptionPane.showInputDialog("Input Server IP", "192.168.0.127");
+    nickName = JOptionPane.showInputDialog("Input Your Nickname");
 
     try {
       socket = new Socket(serverIp, 7777);
@@ -36,7 +36,6 @@ public class _04_TcpIpChat_Swing extends BaseFrm {
     Receiver r = new Receiver(socket);
     r.start();
     tf.requestFocus();
-
   }
 
   @Override
@@ -65,12 +64,12 @@ public class _04_TcpIpChat_Swing extends BaseFrm {
   }
 
   private class Receiver extends Thread {
-    Socket socket;
+    // Socket socket;
     DataInputStream in;
 
     public Receiver(Socket socket) {
       try {
-        this.socket = socket;
+        // this.socket = socket;
         in = new DataInputStream(socket.getInputStream());
       } catch (Exception e) {
         e.printStackTrace();
