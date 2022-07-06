@@ -7,6 +7,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 import dao.DaoList;
+import javax.swing.SwingConstants;
 
 public class FrmList extends BaseFrm {
 	private JLabel lbTitle;
@@ -18,7 +19,8 @@ public class FrmList extends BaseFrm {
 	@Override
 	public void init() {
 		lbTitle = new JLabel("회원 목록");
-		lbTitle.setFont(new Font("맑은 고딕", Font.BOLD, 28));
+		lbTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lbTitle.setFont(new Font("맑은 고딕", Font.BOLD, 20));
 		table = new JTable();
 		scp = new JScrollPane(table);
 		
@@ -29,6 +31,6 @@ public class FrmList extends BaseFrm {
 
 	@Override
 	public void arrange() {
-		add(lbTitle, "North"); add(scp, "Center");
+		getContentPane().add(lbTitle, "North"); getContentPane().add(scp, "Center");
 	}
 }

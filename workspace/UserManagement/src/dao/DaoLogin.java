@@ -12,7 +12,8 @@ public class DaoLogin extends DaoSet {
 			conn = connDB();
 			String sql = "select * from db7.users where id=? and pass=? ";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, id);pstmt.setString(2, pass);
+			pstmt.setString(1, id);
+			pstmt.setString(2, pass);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				result = new UserVo(
@@ -21,7 +22,8 @@ public class DaoLogin extends DaoSet {
 						rs.getString("pass")
 						);
 			}
-		} catch (SQLException e) {e.printStackTrace();}
+		} catch (SQLException e) {e.printStackTrace();
+		} finally { closeDB();}
 		return result;
 	}
 }

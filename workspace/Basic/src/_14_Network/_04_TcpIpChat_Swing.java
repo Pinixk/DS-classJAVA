@@ -39,7 +39,6 @@ public class _04_TcpIpChat_Swing extends BaseFrm {
 
   }
 
-
   @Override
   public void init() {
     ta = new JTextArea();

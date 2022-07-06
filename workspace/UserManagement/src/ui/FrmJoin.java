@@ -1,4 +1,5 @@
 package ui;
+
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -52,7 +53,7 @@ public class FrmJoin extends BaseFrm {
 		
 		btnJoinRegist = new JButton("가입");
 		btnJoinRegist.setFont(new Font("굴림", Font.BOLD, 18));
-		btnJoinRegist.setBounds(48, 247, 97, 37);
+		btnJoinRegist.setBounds(137, 247, 80, 26);
 		btnJoinRegist.addActionListener(e->{
 			String id = tfId.getText();
 			String name = tfName.getText();
@@ -72,7 +73,7 @@ public class FrmJoin extends BaseFrm {
 		
 		joinCancel = new JButton("취소");
 		joinCancel.setFont(new Font("굴림", Font.BOLD, 18));
-		joinCancel.setBounds(212, 247, 97, 37);
+		joinCancel.setBounds(229, 247, 80, 26);
 		joinCancel.addActionListener(e->{
 			dispose();
 			new FrmLogin();
@@ -99,7 +100,6 @@ public class FrmJoin extends BaseFrm {
 		getContentPane().add(tfName);
 		getContentPane().add(joinId);
 		getContentPane().add(joinName);
-		
 	}
 
 }

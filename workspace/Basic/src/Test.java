@@ -18,8 +18,8 @@ public class Test extends Base {
   private JScrollPane scp;
   private JTextField tf;
   private Socket socket;
-  private DataOutputStream out;
   private String nickName;
+  private DataOutputStream out;
 
   public Test() {
     super("Chat room", 400, 500);
@@ -70,12 +70,12 @@ public class Test extends Base {
   }
 
   private class Receiver extends Thread {
-    Socket socket;
+    // Socket socket;
     DataInputStream in;
 
     public Receiver(Socket socket) {
       try {
-        this.socket = socket;
+        // this.socket = socket;
         in = new DataInputStream(socket.getInputStream());
       } catch (Exception e) {
         e.printStackTrace();
