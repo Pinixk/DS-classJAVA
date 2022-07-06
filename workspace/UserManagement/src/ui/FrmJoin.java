@@ -64,6 +64,7 @@ public class FrmJoin extends BaseFrm {
 			if(name.length()==0 || name.trim().length()==0){JOptionPane.showMessageDialog(btnJoinRegist,"이름을 입력하세요"); tfName.setText(""); tfName.requestFocus(); return;}
 			if(pass.length()==0 || pass.trim().length()==0){JOptionPane.showMessageDialog(btnJoinRegist,"비밀번호를 입력하세요"); pfPass.setText(""); pfPass.requestFocus(); return;}
 			if(!pass.equals(RePass)){JOptionPane.showMessageDialog(btnJoinRegist,"비밀번호를 일치하게 쓰세요"); pfRePass.setText(""); pfRePass.requestFocus(); return;}
+			
 			int ret = new DaoJoin().addUser(new UserVo(id, name, pass));
 			if(ret>0) JOptionPane.showMessageDialog(btnJoinRegist, "가입되었습니다.");
 			else JOptionPane.showMessageDialog(btnJoinRegist, "가입에 실패하였습니다.");

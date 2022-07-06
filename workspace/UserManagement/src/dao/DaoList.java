@@ -14,7 +14,10 @@ public class DaoList extends DaoSet {
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 			  model.addRow(
-				new String[]{rs.getString("id"),rs.getString("NAME"),rs.getString("pass")}
+				new String[]{
+						rs.getString("id"),
+						rs.getString("NAME"),
+						rs.getString("pass")}
 			  );
 			}
 		} catch (SQLException e) {e.printStackTrace();}
